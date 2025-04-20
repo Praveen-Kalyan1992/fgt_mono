@@ -1,0 +1,22 @@
+{
+    "partners": [
+        {
+            "id": 1,
+            "name": "Manmohan Singh",
+            "designation": "Former Prime Minister",
+            "isAlive": false
+        },
+        {
+            "id": 2,
+            "name": "Narendra Modi",
+            "designation": "Prime Minister",
+            "isAlive": true
+        },
+        {
+            "id": 3,
+            "name": "Annamalai",
+            "designation": "BJP ex state head",
+            "isAlive": true
+        }
+    ]
+}

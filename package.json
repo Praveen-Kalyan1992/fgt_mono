@@ -1,0 +1,21 @@
+{
+    "name": "fgt-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "fgt-platform": "cd fgt-platform && npm run start",
+        "fgt-spa": "cd fgt-spa && npm run start",
+        "start": "run-p fgt-platform fgt-spa"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "npm-run-all": "^4.1.5"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "jsonwebtoken": "^8.5.1"
+    }
+}

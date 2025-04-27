@@ -1,21 +1,23 @@
 import { gql, useQuery } from "@apollo/client";
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import MediaCard from "../../../shared/components/Card/Card";
-import dotImage from "../../../assets/images/bg-dot.png";
 import reptile from "../../../assets/images/contemplative-reptile.jpg";
 
 const OurTeam = () => {
-  const ALL_PARTNERS = gql`
-    query partners {
-      partners {
-        designation
-        name
+  const ALL_MEMBERS = gql`
+   query teams {
+    teams {
+      name
+      id
+      skillSet {
         id
+        name
       }
     }
+}
   `;
 
-  const { loading, data } = useQuery(ALL_PARTNERS);
+  const { loading, data } = useQuery(ALL_MEMBERS);
   return (
     <Box
       sx={{
@@ -36,7 +38,7 @@ const OurTeam = () => {
         variant="h1"
         component="h1"
       >
-        Lets Discover About Our Talented Team Member
+        Lets Discover About Our Talented Team Members
       </Typography>
 
       <Paper
@@ -62,8 +64,8 @@ const OurTeam = () => {
           sx={{ width: "100%", height: "100%", marginTop: "80px" }}
         >
           {!loading &&
-            data?.partners?.map((partner: any, index: number) => (
-              <MediaCard title={partner.name} imageURL={reptile} description={partner.designation} key={index} />
+            data?.teams?.map((member: any, index: number) => (
+              <MediaCard title={member.name} imageURL={reptile} description={member.designation} key={index} />
             ))}
         </Stack>
       </Paper>

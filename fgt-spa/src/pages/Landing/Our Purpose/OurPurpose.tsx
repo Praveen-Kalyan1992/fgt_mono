@@ -37,7 +37,7 @@ const OurPurpose = () => {
         variant="h1"
         component="h1"
       >
-        Lets Discover About Our Pride Partners
+        Lets Discover About Our Purpose
       </Typography>
 
       <Paper

@@ -3,7 +3,7 @@ import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Landing from "../pages/Landing/Landing";
 import Header from "../pages/Header/Header";
 import Footer from "../pages/Footer/Footer";
-import Partners from "../pages/Landing/Partners/Partners";
+import Partners from "../pages/Landing/OurPartners/OurPartners";
 const Routes = () => {
     return (<Router>
         <Header />

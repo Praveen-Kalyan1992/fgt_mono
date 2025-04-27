@@ -1,5 +1,13 @@
+import { Paper } from "@mui/material";
+
 const Footer = () => {
   return (
+    <Paper
+    sx={{
+      justifyContent: "center",
+      width: "100%"
+    }}
+  >
       <footer className="bg-neutral-200 text-center text-white dark:bg-neutral-600">
         <div className="pt-9">
           <div className="mb-9 flex justify-center">
@@ -78,6 +86,7 @@ const Footer = () => {
           > FGT</a>
         </div>
       </footer>
+  </Paper>
   );
 }
 

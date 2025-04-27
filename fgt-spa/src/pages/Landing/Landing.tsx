@@ -1,11 +1,17 @@
 import Details from "./Details/Details";
-import Partners from "./Partners/Partners";
+import OurFeatures from "./Our Features/OurFeatures";
+import OurPurpose from "./Our Purpose/OurPurpose";
+import OurTeam from "./Our Team/OurTeam";
+import OurPartners from "./OurPartners/OurPartners";
 
 const Landing = () => {
   return (
     <>
       <Details />
-      <Partners />
+      <OurFeatures />
+      <OurPurpose/>
+      <OurPartners />
+      <OurTeam />
     </>
   );
 }

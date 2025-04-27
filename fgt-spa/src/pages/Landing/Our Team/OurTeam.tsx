@@ -29,14 +29,14 @@ const OurTeam = () => {
         variant="h4"
         component="h2"
       >
-        Our Partners
+        Our Team
       </Typography>
 
       <Typography align="center" color="#141516" fontWeight={300}
         variant="h1"
         component="h1"
       >
-        Lets Discover About Our Pride Partners
+        Lets Discover About Our Talented Team Member
       </Typography>
 
       <Paper

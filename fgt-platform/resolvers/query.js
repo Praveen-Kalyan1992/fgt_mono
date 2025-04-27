@@ -9,6 +9,14 @@ module.exports = {
     const partner = dataSources.partnerDataSource.getPartnerById(id);
     return partner;
   },
+  teams: (parent, args, { dataSources }, info) => {
+    const allMembers = dataSources.teamsDataSource.getTeamMembers();
+    return allMembers;
+  },
+  teamMemberById: (parent, { id }, { dataSources }, info) => {
+    const partner = dataSources.teamsDataSource.getMemberById(id);
+    return partner;
+  },
 //   speakers: async (parent, args, { dataSources }, info) => {
 //     const allSpeakers = await dataSources.speakerDataSource.getSpeakers(args);
 //     return allSpeakers;

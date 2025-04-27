@@ -1,6 +1,7 @@
 require("dotenv").config();
 const { ApolloServer } = require("apollo-server-express");
 const PartnerDataSource = require("./datasources/partners");
+const TeamsDataSource = require("./datasources/teams");
 // const SessionDataSource = require("./datasources/sessions");
 // const SpeakerDataSource = require("./datasources/speakers");
 // const UserDataSource = require("./datasources/users");
@@ -14,6 +15,7 @@ const app = express();
 
 const dataSources = () => ({
   partnerDataSource: new PartnerDataSource(),
+  teamsDataSource: new TeamsDataSource(),
   // sessionDataSource: new SessionDataSource(),
 //   speakerDataSource: new SpeakerDataSource(),
 //   userDataSource: new UserDataSource(),

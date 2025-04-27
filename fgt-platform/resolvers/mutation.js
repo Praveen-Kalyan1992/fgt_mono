@@ -7,6 +7,13 @@ module.exports = {
     );
     return partner;
   },
+  createTeamMember: async (parent, args, { dataSources }, info) => {
+    const member = await dataSources.teamsDataSource.createTeamMember(
+      args.member
+    );
+    return member;
+  },
+
 //   signUp: async (parent, { credentials }, { dataSources, res }, info) => {
 //     const { email, password } = credentials;
 //     const userCredentials = { email: email.toLowerCase(), password };

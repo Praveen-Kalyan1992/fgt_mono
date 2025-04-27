@@ -1,0 +1,25 @@
+{
+    "teams": [
+        {
+            "id": 1,
+            "name": "Praveen Kalyan",
+            "designation": "Senior Full Stack Developer",
+            "isAlive": true,
+            "skillSet" : [{"id": 1, "name": "React"}]
+        },
+        {
+            "id": 2,
+            "name": "Mekala Vignesh",
+            "designation": "Senior Software Engineer",
+            "isAlive": true,
+            "skillSet" : [{"id": 1, "name": "React"}]
+        },
+        {
+            "id": 3,
+            "name": "Vigneshkumar Karnan",
+            "designation": "Senior Front End Developer",
+            "isAlive": true,
+            "skillSet" : [{"id": 1, "name": "React"}]
+        }
+    ]
+}

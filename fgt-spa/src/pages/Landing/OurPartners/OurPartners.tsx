@@ -29,11 +29,11 @@ const OurPartners = () => {
         variant="h4"
         component="h2"
       >
-        Our Partners
+       Connect With Us
       </Typography>
 
       <Typography align="center" color="#141516" fontWeight={300}
-        variant="h1"
+        variant="h5"
         component="h1"
       >
         Lets Discover About Our Pride Partners
@@ -54,7 +54,7 @@ const OurPartners = () => {
         }}
         square
       >
-        <Stack
+        {/* <Stack
           spacing={2}
           direction="row"
           alignContent="center"
@@ -65,7 +65,7 @@ const OurPartners = () => {
             data?.partners?.map((partner: any, index: number) => (
               <MediaCard title={partner.name} imageURL={reptile} description={partner.designation} key={index} />
             ))}
-        </Stack>
+        </Stack> */}
       </Paper>
     </Box>
   );

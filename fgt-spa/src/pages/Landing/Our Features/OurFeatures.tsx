@@ -30,22 +30,35 @@ const OurFeatures = () => {
         variant="h4"
         component="h2"
       >
-        Our Features
+        Why Partner With Us
       </Typography>
 
       <Typography align="center" color="#141516" fontWeight={300}
-        variant="h1"
+        variant="h6"
         component="h1"
       >
-        Lets Discover About Our Tech Features
+        At FGT, <br></br><p>We understand that technology is ever-evolving, and to stay ahead, flexibility is key. By adopting agile methodologies,
+          we ensure that we can quickly adapt to changes and deliver solutions that grow with your business</p><br></br>Whether you're developing a mobile app,
+        a web application, or custom software, we’re with you every step of the way. Our end-to-end service covers everything,
+        from initial planning and design to development and ongoing post-launch support — ensuring that your solution is not only scalable but also future-ready."      </Typography>
+
+      <Typography align="center" color="#3571dd" fontWeight={100}
+        variant="h6"
+        component="h2"
+
+      >
+        We don’t just deliver and disappear; we build lasting partnerships that grow with you
+
       </Typography>
 
+
+
       <Paper
-        sx={{   
+        sx={{
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          alignContent: "center",   
+          alignContent: "center",
           justifyContent: "center",
           height: "600px",
           width: "100%",

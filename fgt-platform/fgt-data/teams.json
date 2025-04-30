@@ -9,7 +9,7 @@
         },
         {
             "id": 2,
-            "name": "Mekala Vignesh",
+            "name": "Mekala V",
             "designation": "Senior Software Engineer",
             "isAlive": true,
             "skillSet" : [{"id": 1, "name": "React"}]

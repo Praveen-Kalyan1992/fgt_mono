@@ -8,6 +8,7 @@ const OurTeam = () => {
    query teams {
     teams {
       name
+      designation
       id
       skillSet {
         id
@@ -31,14 +32,14 @@ const OurTeam = () => {
         variant="h4"
         component="h2"
       >
-        Our Team
+        The FGT Team
       </Typography>
 
       <Typography align="center" color="#141516" fontWeight={300}
-        variant="h1"
+        variant="h4"
         component="h1"
       >
-        Lets Discover About Our Talented Team Members
+        Together, we craft the software that shapes your future
       </Typography>
 
       <Paper

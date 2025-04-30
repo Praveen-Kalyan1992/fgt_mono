@@ -29,7 +29,7 @@ const OurTeam = () => {
       }}
     >
       <Typography align="center" color="#3571dd" fontWeight={600}
-        variant="h4"
+        variant="h5"
         component="h2"
       >
         The FGT Team

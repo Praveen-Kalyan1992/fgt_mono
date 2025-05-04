@@ -62,7 +62,7 @@ const Header = () => {
               textDecoration: 'none',
             }}
           >
-            Furistic Global Technology
+            Futuristic Global Technology
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

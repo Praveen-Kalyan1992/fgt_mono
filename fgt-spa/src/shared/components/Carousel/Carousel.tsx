@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
-import { IconButton } from "@mui/material";
+import { IconButton, Paper } from "@mui/material";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Slide from "@mui/material/Slide";
 import Stack from "@mui/material/Stack";
-import MediaCard from "../Card/Card";
+import FeatureCard from "../FeatureCard/FeatureCard";
 
 function Carousel() {
   // setting the state variables
@@ -22,10 +22,10 @@ function Carousel() {
   // you can modify for your needs
   const cardsPerPage = 4;
   // this is just a dummy array of cards it uses the MUI card demo and repeats it 10 times
-//   const duplicateCards: React.ReactElement[] = Array.from(
-//     { length: 10 },
-//     (_, i) => <MediaCard key={i} />
-//   );
+  const duplicateCards: React.ReactElement[] = Array.from(
+    { length: 6 },
+    (_, i) => <FeatureCard title={i.toString()} key={i} />
+  );
 
   // these two functions handle changing the pages
   const handleNextPage = () => {
@@ -43,10 +43,10 @@ function Carousel() {
   // you can remove this and replace it with your own useEffect
   // or if your page is static you can just set the cards to the array
   // at the top of the file
-//   useEffect(() => {
-//     setCards(duplicateCards);
-//     // eslint-disable-next-line
-//   }, []);
+  useEffect(() => {
+    setCards(duplicateCards);
+    // eslint-disable-next-line
+  }, []);
   // this sets the container width to the number of cards per page * 250px
   // which we know because it is defined in the card component
   const containerWidth = cardsPerPage * 500; // 250px per card
@@ -73,7 +73,7 @@ function Carousel() {
         {/* this is the button that will go to the previous page you can change these icons to whatever you wish*/}
         <NavigateBeforeIcon />
       </IconButton>
-      
+
       <Box sx={{ width: `${containerWidth}px`, height: "100%" }}>
         {/* this is the box that holds the cards and the slide animation,
         in this implementation the card is already constructed but in later versions you will see how the
@@ -96,11 +96,23 @@ function Carousel() {
                 justifyContent="center"
                 sx={{ width: "100%", height: "100%" }}
               >
-                {/* this slices the cards array to only display the amount you have previously determined per page*/}
-                {cards.slice(
-                  index * cardsPerPage,
-                  index * cardsPerPage + cardsPerPage
-                )}
+                <Paper
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    alignContent: "center",
+                    justifyContent: "center",
+                    height: "400px",
+                    width: "100%",
+                    margin: "10px",
+                    background: "#FAFAFA",
+                    boxShadow: "none",
+                    border: "2px solid #8f4dce",
+                    borderRadius: "20px",
+                  }}
+                  square
+                ></Paper>
               </Stack>
             </Slide>
           </Box>

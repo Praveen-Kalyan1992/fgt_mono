@@ -6,14 +6,13 @@ import OurPartners from "./OurPartners/OurPartners";
 
 const Landing = () => {
   return (
-    <>
+    <div>
       <Details />
       <OurFeatures />
-      {/* <OurPurpose/> */}
-      
+      <OurPurpose/>
       <OurTeam />
       <OurPartners />
-    </>
+    </div>
   );
 }
 

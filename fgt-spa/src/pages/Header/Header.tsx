@@ -42,7 +42,7 @@ const Header = () => {
     setAnchorElUser(null);
   };
   return (
-    <AppBar position="static" color='primary'>
+    <AppBar position="fixed" color='primary'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -57,8 +57,7 @@ const Header = () => {
               fontFamily: 'monospace',
               fontWeight: 800,
               letterSpacing: '.3rem',
-              color: 'transparent',  // Set color to transparent to apply gradient
-              backgroundImage: 'linear-gradient(to right, #1E90FF, #FF1493)',  // Blue to pink gradient
+              color: '#FFFFFF',  // Set color to transparent to apply gradient
               backgroundClip: 'text',  // Ensures the gradient is applied to the text
               textDecoration: 'none',
             }}
@@ -95,7 +94,7 @@ const Header = () => {
             >
               {pages.map((page: any) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'left', display: 'block' }}>{page.name}</Typography>
+                  <Typography sx={{ textAlign: 'left', display: 'block', color: '#3548dd', }}>{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>

@@ -13,7 +13,7 @@ interface cardProps {
 
 const FeatureCard = ({ title, description, imageURL }: cardProps) => {
   return (
-    <Card sx={{ width: "300px", height: "335px" }}>
+    <Card sx={{ width: "300px", height: "500px" }}>
       <CardMedia sx={{ height: 140 }} image={imageURL} title="green iguana" />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

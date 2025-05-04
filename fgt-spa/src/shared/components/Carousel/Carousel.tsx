@@ -7,7 +7,7 @@ import Slide from "@mui/material/Slide";
 import Stack from "@mui/material/Stack";
 import FeatureCard from "../FeatureCard/FeatureCard";
 
-function Carousel() {
+const Carousel = () =>{
   // setting the state variables
   // cards will be the cards that are displayed
   const [cards, setCards] = useState<React.ReactElement[]>([]);

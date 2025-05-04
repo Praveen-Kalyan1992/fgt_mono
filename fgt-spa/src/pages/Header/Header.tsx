@@ -54,10 +54,11 @@ const Header = () => {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              fontFamily: `"Pattaya", sans-serif`,
               fontWeight: 800,
+              fontStyle: "normal",
               letterSpacing: '.3rem',
-              color: '#FFFFFF',  // Set color to transparent to apply gradient
+              color: "#d81b60",  // Set color to transparent to apply gradient
               backgroundClip: 'text',  // Ensures the gradient is applied to the text
               textDecoration: 'none',
             }}
@@ -94,7 +95,9 @@ const Header = () => {
             >
               {pages.map((page: any) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'left', display: 'block', color: '#3548dd', }}>{page.name}</Typography>
+                  <Typography sx={{ textAlign: 'left', display: 'block', color: '#d81b60', fontFamily: `"Pattaya", sans-serif`,
+                  fontWeight: 800,
+                  fontStyle: "normal" }}>{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -123,7 +126,9 @@ const Header = () => {
               <Button
                 key={page.name}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', textAlign: 'left', width: '100%' }}
+                sx={{ my: 2, textAlign: 'left', width: '100%', color: '#d81b60', fontFamily: `"Pattaya", sans-serif`,
+                  fontWeight: 800,
+                  fontStyle: "normal"}}
               >
                 {page.name}
               </Button>

@@ -28,19 +28,31 @@ const OurPartners = () => {
       <Typography
         align="center"
         color="#3571dd"
-        fontWeight={600}
+        fontFamily={`"Pattaya", sans-serif`}
+        fontWeight={800}
+        fontStyle={"normal"}
         variant="h4"
         component="h2"
       >
-        Connect With Us
+        Colloborate With Us
       </Typography>
 
       <Typography
-        align="center"
-        color="#141516"
-        fontWeight={300}
-        variant="h5"
-        component="h1"
+        variant="h6"
+        noWrap={false}
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          alignContent: "center",
+          justifyContent: "center",
+          fontFamily: `"Pattaya", sans-serif`,
+          fontWeight: 800,
+          fontStyle: "normal",
+          letterSpacing: ".1rem",
+          color: "#DE3163",
+          marginTop: "30px",
+        }}
       >
         Lets Discover About Our Pride Partners
       </Typography>

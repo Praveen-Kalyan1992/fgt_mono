@@ -1,0 +1,28 @@
+{
+    "features": [
+        {
+            "id": 1,
+            "name": "Web Development",
+            "description": "Senior Full Stack Developer",
+            "isActive": true,
+            "supportingDescription" : [{"id": 1, "name": "React"}],
+            "imageUrl": ""
+        },
+        {
+            "id": 2,
+            "name": "Mobile Development",
+            "description": "Senior Full Stack Developer",
+            "isActive": true,
+            "supportingDescription" : [{"id": 1, "name": "React"}],
+            "imageUrl": ""
+        },
+        {
+            "id": 3,
+            "name": "Ecommerce Solutions Building",
+            "description": "Senior Full Stack Developer",
+            "isActive": true,
+            "supportingDescription" : [{"id": 1, "name": "React"}],
+            "imageUrl": ""
+        }
+    ]
+}

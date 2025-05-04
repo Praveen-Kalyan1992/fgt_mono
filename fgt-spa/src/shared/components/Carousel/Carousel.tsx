@@ -60,7 +60,7 @@ const Carousel = () =>{
         alignItems: "center",
         alignContent: "center",
         justifyContent: "center",
-        height: "400px",
+        height: "500px",
         width: "100%",
         marginTop: "60px",
       }}
@@ -103,7 +103,7 @@ const Carousel = () =>{
                     alignItems: "center",
                     alignContent: "center",
                     justifyContent: "center",
-                    height: "400px",
+                    height: "500px",
                     width: "100%",
                     margin: "10px",
                     background: "#FAFAFA",
@@ -112,7 +112,9 @@ const Carousel = () =>{
                     borderRadius: "20px",
                   }}
                   square
-                ></Paper>
+                >
+                  
+                </Paper>
               </Stack>
             </Slide>
           </Box>

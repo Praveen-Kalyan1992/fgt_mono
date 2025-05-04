@@ -49,23 +49,26 @@ const Details = () => {
         />
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <Box sx={{
-             marginTop: "30px"
-            }}>
+        <Box
+          sx={{
+            marginTop: "30px",
+          }}
+        >
           <Typography
             variant="h2"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
-              display:"block",
-              fontFamily: "serif",
+              display: "block",
+              fontFamily: `"Pattaya", sans-serif`,
               fontWeight: 800,
+              fontStyle: "normal",
               letterSpacing: ".1rem",
-              color: "#3548dd",
+              color: "#d81b60",
             }}
           >
-            We Build 
+            We Build
           </Typography>
 
           <Typography
@@ -74,46 +77,49 @@ const Details = () => {
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
-              display:"block",
-              fontFamily: "serif",
+              display: "block",
+              fontFamily: `"Pattaya", sans-serif`,
               fontWeight: 800,
+              fontStyle: "normal",
               letterSpacing: ".1rem",
-              color: "#3548dd",
+              // color: "#3548dd",
+              color:"#d81b60",
             }}
           >
-            Your Dream With Skill
+            Your Dream With Skill !!!
           </Typography>
-          <Box sx={{  marginTop: "30px" }}></Box>
-          <Typography
-            variant="h6"
-            noWrap={false}
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              display:"block",
-              fontFamily: "serif",
-              fontWeight: 800,
-              letterSpacing: ".1rem",
-              color: "#3548dd",
-            }}
-          >
-            Our team blends expertise with fresh creativity to craft scalable,
-            impactful digital solutions from start to finish.
-          </Typography>
+          <Box sx={{ marginTop: "30px" }}></Box>
+
         </Box>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold sm:grid-cols-2 md:flex lg:gap-x-10">
             {links.map((link) => (
-              <a key={link.name} href={link.href}>
+              <a
+                key={link.name}
+                href={link.href}
+                style={{
+                  fontFamily: `"Pattaya", sans-serif`,
+                  fontWeight: 800,
+                  fontStyle: "normal",
+                  color: "#3548dd",
+                }}
+              >
                 {link.name} <span aria-hidden="true">&rarr;</span>
               </a>
             ))}
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
-              <div key={stat.name} className="flex flex-col-reverse gap-1">
-                <dt className="text-base/7 text-gray-300">{stat.name}</dt>
-                <dd className="text-4xl font-semibold tracking-tight text-white">
+              <div key={stat.name} className="flex flex-col-reverse gap-1"  style={{
+                fontFamily: `"Pattaya", sans-serif`,
+                fontWeight: 800,
+                fontStyle: "normal",
+                color: "#3548dd",
+              }}>
+                <dt className="text-base/7 text-gray-300" style={{
+                color: "#DE3163",
+              }}>{stat.name}</dt>
+                <dd className="text-4xl font-semibold tracking-tight">
                   {stat.value}
                 </dd>
               </div>

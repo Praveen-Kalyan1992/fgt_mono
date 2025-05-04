@@ -18,7 +18,6 @@ class TeamsDataSource extends DataSource {
   }
 
   getTeamMembers() {
-    // return this.db.filter(args).value();
     return this.db.value();
   }
 

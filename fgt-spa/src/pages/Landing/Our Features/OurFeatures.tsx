@@ -26,14 +26,16 @@ const OurFeatures = () => {
       <Typography
         align="center"
         color="#3571dd"
-        fontWeight={600}
+        fontFamily={`"Pattaya", sans-serif`}
+        fontWeight={800}
+        fontStyle={"normal"}
         variant="h4"
         component="h2"
       >
-        Why Partner With Us
+        Why Partnering With Us
       </Typography>
 
-      <Typography
+      {/* <Typography
         align="center"
         color="#141516"
         fontWeight={300}
@@ -52,9 +54,9 @@ const OurFeatures = () => {
         service covers everything, from initial planning and design to
         development and ongoing post-launch support — ensuring that your
         solution is not only scalable but also future-ready."
-      </Typography>
+      </Typography> */}
 
-      <Typography
+      {/* <Typography
         align="center"
         color="#3571dd"
         fontWeight={100}
@@ -63,7 +65,7 @@ const OurFeatures = () => {
       >
         We don’t just deliver and disappear; we build lasting partnerships that
         grow with you
-      </Typography>
+      </Typography> */}
       <Carousel />
     </Box>
   );

@@ -31,14 +31,16 @@ const OurTeam = () => {
       <Typography
         align="center"
         color="#3571dd"
-        fontWeight={600}
-        variant="h5"
+        fontFamily={`"Pattaya", sans-serif`}
+        fontWeight={800}
+        fontStyle={"normal"}
+        variant="h4"
         component="h2"
       >
         The FGT Team
       </Typography>
 
-      <Typography
+      {/* <Typography
         align="center"
         color="#141516"
         fontWeight={300}
@@ -46,6 +48,27 @@ const OurTeam = () => {
         component="h1"
       >
         Together, we craft the software that shapes your future
+      </Typography> */}
+
+      <Typography
+        variant="h6"
+        noWrap={false}
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          alignContent: "center",
+          justifyContent: "center",
+          fontFamily: `"Pattaya", sans-serif`,
+          fontWeight: 800,
+          fontStyle: "normal",
+          letterSpacing: ".1rem",
+          color: "#DE3163",
+          marginTop: "30px",
+        }}
+      >
+        Our team blends expertise with fresh creativity to craft scalable,
+        impactful digital solutions from start to finish.
       </Typography>
       <Stack
         spacing={2}

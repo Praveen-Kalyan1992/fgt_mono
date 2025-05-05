@@ -14,6 +14,13 @@ module.exports = {
     return member;
   },
 
+  createFeature: async (parent, args, { dataSources }, info) => {
+    const feature = await dataSources.featuresDataSource.createFeature(
+      args.feature
+    );
+    return feature;
+  },
+
 //   signUp: async (parent, { credentials }, { dataSources, res }, info) => {
 //     const { email, password } = credentials;
 //     const userCredentials = { email: email.toLowerCase(), password };

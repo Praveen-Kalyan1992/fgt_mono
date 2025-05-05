@@ -3,7 +3,7 @@
         {
             "id": 1,
             "name": "Web Development",
-            "description": "Senior Full Stack Developer",
+            "description": "Building and maintaining websites so businesses can connect with customers, showcase their brand, and share important information online, all while ensuring a smooth user experience.",
             "isActive": true,
             "supportingDescription" : [{"id": 1, "name": "React"}],
             "imageUrl": ""
@@ -11,7 +11,7 @@
         {
             "id": 2,
             "name": "Mobile Development",
-            "description": "Senior Full Stack Developer",
+            "description": "Building and maintaining websites so businesses can connect with customers, showcase their brand, and share important information online, all while ensuring a smooth user experience.",
             "isActive": true,
             "supportingDescription" : [{"id": 1, "name": "React"}],
             "imageUrl": ""
@@ -19,7 +19,7 @@
         {
             "id": 3,
             "name": "Ecommerce Solutions Building",
-            "description": "Senior Full Stack Developer",
+            "description": "Tools and services that help you sell online, including website design, payment processing, and inventory management, making it easy for customers to shop and for you to manage sales.",
             "isActive": true,
             "supportingDescription" : [{"id": 1, "name": "React"}],
             "imageUrl": ""

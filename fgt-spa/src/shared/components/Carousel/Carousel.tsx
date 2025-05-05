@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
-import { IconButton, Paper } from "@mui/material";
+import { Grid, IconButton, Paper, Typography } from "@mui/material";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Slide from "@mui/material/Slide";
 import Stack from "@mui/material/Stack";
 import FeatureCard from "../FeatureCard/FeatureCard";
+import discussionImage from "../../../assets/images/10.avif";
 
-const Carousel = () =>{
+interface carouselProps {
+  data: any;
+}
+
+const Carousel = ({ data }: carouselProps) => {
   // setting the state variables
   // cards will be the cards that are displayed
   const [cards, setCards] = useState<React.ReactElement[]>([]);
@@ -20,11 +25,13 @@ const Carousel = () =>{
 
   // cardsPerPage is the number of cards that will be displayed per page
   // you can modify for your needs
-  const cardsPerPage = 4;
-  // this is just a dummy array of cards it uses the MUI card demo and repeats it 10 times
-  const duplicateCards: React.ReactElement[] = Array.from(
-    { length: 6 },
-    (_, i) => <FeatureCard title={i.toString()} key={i} />
+  const cardsPerPage = 1;
+
+  let listOfCards: React.ReactElement[] = [];
+  data?.features.forEach((each: any, i: number) =>
+    listOfCards.push(
+      <FeatureCard title={data?.features[i].name.toString()} imageURL={discussionImage} key={i} />
+    )
   );
 
   // these two functions handle changing the pages
@@ -38,18 +45,12 @@ const Carousel = () =>{
     setCurrentPage((prevPage) => prevPage - 1);
   };
 
-  // This useEffect is really just for demonstration purposes
-  // it sets the cards to the duplicateCards array
-  // you can remove this and replace it with your own useEffect
-  // or if your page is static you can just set the cards to the array
-  // at the top of the file
   useEffect(() => {
-    setCards(duplicateCards);
+    setCards(listOfCards);
     // eslint-disable-next-line
   }, []);
-  // this sets the container width to the number of cards per page * 250px
-  // which we know because it is defined in the card component
-  const containerWidth = cardsPerPage * 500; // 250px per card
+
+  const renderDescription = (description: any) => description[0].name;
 
   return (
     //  outer box that holds the carousel and the buttons
@@ -74,7 +75,7 @@ const Carousel = () =>{
         <NavigateBeforeIcon />
       </IconButton>
 
-      <Box sx={{ width: `${containerWidth}px`, height: "100%" }}>
+      <Box sx={{ width: "100%", height: "100%" }}>
         {/* this is the box that holds the cards and the slide animation,
         in this implementation the card is already constructed but in later versions you will see how the
         items you wish to use will be dynamically created with the map method*/}
@@ -113,7 +114,55 @@ const Carousel = () =>{
                   }}
                   square
                 >
-                  
+                  <Grid container spacing={1}>
+                    <Grid size={{ xs: 8, md: 8 }}>
+                      <Box
+                        sx={{
+                          display: "block",
+                          width: "100%",
+                          marginTop: "60px",
+                        }}
+                      >
+                        <Typography
+                          align="center"
+                          color="#3571dd"
+                          fontFamily={`"Pattaya", sans-serif`}
+                          fontWeight={400}
+                          fontStyle={"normal"}
+                          variant="h4"
+                          component="h2"
+                        >
+                          {data?.features[index].name}
+                        </Typography>
+                         <Typography
+                          align="center"
+                          color="#3571dd"
+                          fontFamily={`"Pattaya", sans-serif`}
+                          fontWeight={400}
+                          fontStyle={"normal"}
+                          variant="h4"
+                          component="h2"
+                        >
+                          {data?.features[index].description}
+                        </Typography>
+                        <Typography
+                          align="center"
+                          color="#3571dd"
+                          fontFamily={`"Pattaya", sans-serif`}
+                          fontWeight={400}
+                          fontStyle={"normal"}
+                          variant="h4"
+                          component="h2"
+                        >
+                          {renderDescription(
+                            data?.features[index]?.supportingDescription
+                          )}
+                        </Typography>
+                       
+                      </Box>
+                    </Grid>
+                    <Grid size={{ xs: 4, md: 4 }}>{card}</Grid>
+                  </Grid>
                 </Paper>
               </Stack>
             </Slide>
@@ -134,6 +183,6 @@ const Carousel = () =>{
       </IconButton>
     </Box>
   );
-}
+};
 
 export default Carousel;

@@ -9,7 +9,14 @@ module.exports = gql`
     id: ID!
     name: String!
   }
-
+  type SupportingDescription {
+    id: ID!
+    name: String!
+  }
+  input SupportingDescriptionInput {
+    id: ID!
+    name: String!
+  }
   input TeamInput {
     id: ID!
     name: String!
@@ -17,13 +24,27 @@ module.exports = gql`
     isAlive: Boolean
     skillSet: [SkillSetInput!]!
   }
-
+  input FeatureInput {
+    id: ID!
+    name: String!
+    description: String
+    isActive: Boolean
+    supportingDescription: [SupportingDescriptionInput!]!
+  }
   type Team {
     id: ID!
     name: String!
     designation: String
     isAlive: Boolean
     skillSet: [SkillSet]
+  }
+
+  type Feature {
+    id: ID!
+    name: String!
+    description: String
+    isActive: Boolean
+    supportingDescription: [SupportingDescription]
   }
 
   input PartnerInput {
@@ -56,10 +77,19 @@ module.exports = gql`
       skillSet: [SkillSetInput]
     ): [Team]
     teamMemberById(id: ID): Team
+    features(
+      id: ID
+      name: String
+      description: String
+      isActive: Boolean
+      supportingDescription: [SupportingDescriptionInput]
+    ): [Feature]
+    featureById(id: ID): Feature
   }
 
   type Mutation {
     createPartner(partner: PartnerInput): Partner
     createTeamMember(team: TeamInput): Team
+    createFeature(feature: FeatureInput): Feature
   }
 `;

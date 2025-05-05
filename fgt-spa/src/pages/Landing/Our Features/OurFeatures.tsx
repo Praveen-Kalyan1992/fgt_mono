@@ -3,17 +3,20 @@ import { Box, Typography } from "@mui/material";
 import Carousel from "../../../shared/components/Carousel/Carousel";
 
 const OurFeatures = () => {
-  const ALL_PARTNERS = gql`
-    query partners {
-      partners {
-        designation
+  const ALL_FEATURES = gql`
+    query feature {
+      features {
+        supportingDescription {
+          name
+        }
         name
         id
+        description
       }
     }
   `;
 
-  const { loading, data } = useQuery(ALL_PARTNERS);
+  const { loading, data } = useQuery(ALL_FEATURES);
   return (
     <Box
       sx={{
@@ -66,7 +69,7 @@ const OurFeatures = () => {
         We don’t just deliver and disappear; we build lasting partnerships that
         grow with you
       </Typography> */}
-      <Carousel />
+      {!loading && data.features.length > 0 && <Carousel data={data} />}
     </Box>
   );
 };

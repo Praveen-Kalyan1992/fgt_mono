@@ -18,7 +18,7 @@ const dataSources = () => ({
   partnerDataSource: new PartnerDataSource(),
   teamsDataSource: new TeamsDataSource(),
   featuresDataSource: new FeaturesDataSource(),
-  purposeDataSource: new PurposeDataSource(),
+  PurposeDataSource: new PurposeDataSource(),
   // sessionDataSource: new SessionDataSource(),
 //   speakerDataSource: new SpeakerDataSource(),
 //   userDataSource: new UserDataSource(),

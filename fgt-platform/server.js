@@ -3,6 +3,7 @@ const { ApolloServer } = require("apollo-server-express");
 const PartnerDataSource = require("./datasources/partners");
 const TeamsDataSource = require("./datasources/teams");
 const FeaturesDataSource = require("./datasources/features");
+const PurposeDataSource = require("./datasources/purposes.js");
 // const SpeakerDataSource = require("./datasources/speakers");
 // const UserDataSource = require("./datasources/users");
 
@@ -17,6 +18,7 @@ const dataSources = () => ({
   partnerDataSource: new PartnerDataSource(),
   teamsDataSource: new TeamsDataSource(),
   featuresDataSource: new FeaturesDataSource(),
+  purposeDataSource: new PurposeDataSource(),
   // sessionDataSource: new SessionDataSource(),
 //   speakerDataSource: new SpeakerDataSource(),
 //   userDataSource: new UserDataSource(),

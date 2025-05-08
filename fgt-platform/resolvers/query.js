@@ -26,6 +26,15 @@ module.exports = {
     return feature;
   },
 
+  purposes: (parent, args, { dataSources }, info) => {
+    const allPurposes = dataSources.PurposeDataSource.getPurposes();
+    return allPurposes;
+  },
+  purposeById: (parent, { id }, { dataSources }, info) => {
+    const purpose = dataSources.PurposeDataSource.getPurposeById(id);
+    return purpose;
+  },
+
 //   speakers: async (parent, args, { dataSources }, info) => {
 //     const allSpeakers = await dataSources.speakerDataSource.getSpeakers(args);
 //     return allSpeakers;

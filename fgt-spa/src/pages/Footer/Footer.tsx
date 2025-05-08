@@ -4,6 +4,7 @@ import Icon from "@mui/material/Icon";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -77,9 +78,15 @@ const Footer = () => {
                 justifyContent: "center",
               }}
             >
+              <a href="https://www.instagram.com/fgtech.1507">
               <InstagramIcon color="primary">add_circle</InstagramIcon>
+              </a>
+              <a href="https://www.facebook.com">
               <FacebookIcon color="primary">add_circle</FacebookIcon>
-              <XIcon color="primary">add_circle</XIcon>
+              </a>
+              <a href="https://www.linkedin.com">
+              <LinkedInIcon color="primary">add_circle</LinkedInIcon>
+              </a>
             </Box>
           </Grid>
           <Grid size={{ xs: 6, md: 4 }}>

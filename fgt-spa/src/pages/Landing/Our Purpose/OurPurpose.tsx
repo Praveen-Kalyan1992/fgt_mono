@@ -4,17 +4,18 @@ import MediaCard from "../../../shared/components/Card/Card";
 import reptile from "../../../assets/images/contemplative-reptile.jpg";
 
 const OurPurpose = () => {
-  const ALL_PARTNERS = gql`
-    query partners {
-      partners {
-        designation
-        name
-        id
-      }
-    }
+  const ALL_PURPOSES = gql`
+    query myPurposes {
+  purposes{
+    title
+    description
+    id
+  }
+  }
+
   `;
 
-  const { loading, data } = useQuery(ALL_PARTNERS);
+  const { loading, data } = useQuery(ALL_PURPOSES);
   return (
     <Box
       sx={{
@@ -62,11 +63,11 @@ const OurPurpose = () => {
         sx={{ width: "100%", height: "100%", marginTop: "80px" }}
       >
         {!loading &&
-          data?.partners?.map((partner: any, index: number) => (
+          data?.purposes?.map((purpose: any, index: number) => (
             <MediaCard
-              title={partner.name}
-              imageURL={reptile}
-              description={partner.designation}
+              title={purpose.title}
+              // imageURL={purpose.imageURL}
+              description={purpose.description}
               key={index}
             />
           ))}

@@ -21,6 +21,13 @@ module.exports = {
     return feature;
   },
 
+  createPurpose: async (parent, args, { dataSources }, info) => {
+    const purpose = await dataSources.purposeDataSource.createPurpose(
+      args.purpose
+    );
+    return purpose;
+  },
+
 //   signUp: async (parent, { credentials }, { dataSources, res }, info) => {
 //     const { email, password } = credentials;
 //     const userCredentials = { email: email.toLowerCase(), password };

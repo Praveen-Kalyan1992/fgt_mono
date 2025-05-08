@@ -125,7 +125,7 @@ const Carousel = ({ data }: carouselProps) => {
                       >
                         <Typography
                           align="center"
-                          color="#3571dd"
+                          color="red"
                           fontFamily={`"Pattaya", sans-serif`}
                           fontWeight={400}
                           fontStyle={"normal"}
@@ -147,7 +147,7 @@ const Carousel = ({ data }: carouselProps) => {
                         </Typography>
                         <Typography
                           align="center"
-                          color="#3571dd"
+                          color="red"
                           fontFamily={`"Pattaya", sans-serif`}
                           fontWeight={400}
                           fontStyle={"normal"}

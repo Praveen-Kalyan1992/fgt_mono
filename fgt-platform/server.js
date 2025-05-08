@@ -4,8 +4,6 @@ const PartnerDataSource = require("./datasources/partners");
 const TeamsDataSource = require("./datasources/teams");
 const FeaturesDataSource = require("./datasources/features");
 const PurposeDataSource = require("./datasources/purposes.js");
-// const SpeakerDataSource = require("./datasources/speakers");
-// const UserDataSource = require("./datasources/users");
 
 const typeDefs = require("./schema.js");
 const resolvers = require("./resolvers/index");
@@ -18,10 +16,7 @@ const dataSources = () => ({
   partnerDataSource: new PartnerDataSource(),
   teamsDataSource: new TeamsDataSource(),
   featuresDataSource: new FeaturesDataSource(),
-  PurposeDataSource: new PurposeDataSource(),
-  // sessionDataSource: new SessionDataSource(),
-//   speakerDataSource: new SpeakerDataSource(),
-//   userDataSource: new UserDataSource(),
+  purposeDataSource: new PurposeDataSource(),
 });
 
 app.use(cookieParser());

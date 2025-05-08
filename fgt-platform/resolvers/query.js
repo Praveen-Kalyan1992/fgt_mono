@@ -27,11 +27,11 @@ module.exports = {
   },
 
   purposes: (parent, args, { dataSources }, info) => {
-    const allPurposes = dataSources.PurposeDataSource.getPurposes();
+    const allPurposes = dataSources.purposeDataSource.getPurposes();
     return allPurposes;
   },
   purposeById: (parent, { id }, { dataSources }, info) => {
-    const purpose = dataSources.PurposeDataSource.getPurposeById(id);
+    const purpose = dataSources.purposeDataSource.getPurposeById(id);
     return purpose;
   },
 

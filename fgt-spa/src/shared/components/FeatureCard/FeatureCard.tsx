@@ -13,13 +13,31 @@ interface cardProps {
 
 const FeatureCard = ({ title, description, imageURL }: cardProps) => {
   return (
-    <Card sx={{ width: "400px", height: "400px", borderRadius: "200px" }}>
-      <CardMedia sx={{ height: 140 }} image={imageURL} title="green iguana" />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+    <Card  sx={{
+      width: "400px",
+      height: "400px",
+      borderRadius: "200px",
+      backgroundImage: "url(https://images.unsplash.com/photo-1526378722484-bd91ca387e72)",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "flex-end",   // vertically center
+      alignItems: "center",  
+      color: " #3e3c3c",
+      padding: 5,
+      boxShadow: 2,
+    }}>
+      {/* <CardMedia sx={{ height: 140 }} image={imageURL} title="green iguana" /> */}
+      <CardContent sx={{ backgroundColor: "transparent", // removes the box background
+    textAlign: "center",
+    width: "90%",
+    padding: "16px",
+    mb: 2,}}>
+        <Typography gutterBottom variant="h5" fontFamily="cursive" fontWeight="bold" color="#ffccbc" component="div">
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" >
           {description}
         </Typography>
       </CardContent>

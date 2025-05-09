@@ -81,9 +81,20 @@ const OurTeam = () => {
           data?.teams?.map((member: any, index: number) => (
             <MediaCard
               title={member.name}
-              imageURL={reptile}
+              // imageURL='url("https://images.app.goo.gl/Yna74FCyMDp3kdYr6")'
               description={member.designation}
               key={index}
+              cardSx={{ backgroundColor: "#fffbe0", boxShadow: 4 , backgroundSize: "cover",
+                backgroundPosition: "center",
+                height: 250,  // adjust as needed
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-end", // pushes text to bottom
+                padding: 2, // space for text
+                color: "#fff", // white text on image
+                position: "relative",backgroundImage:'url("https://upload.wikimedia.org/wikipedia/commons/d/d1/The_future_%28Unsplash%29.jpg")'}}
+              titleSx={{ color: "#3571dd", fontWeight: 600 }}
+              descriptionSx={{ fontStyle: "italic" ,color: "#f0f0f0"}}
             />
           ))}
       </Stack>

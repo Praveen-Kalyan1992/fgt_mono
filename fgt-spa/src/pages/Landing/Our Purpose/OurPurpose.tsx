@@ -51,6 +51,7 @@ const OurPurpose = () => {
           letterSpacing: ".1rem",
           color: "#DE3163",
           marginTop: "30px",
+       
         }}
       >
         Lets Discover About Our Purpose
@@ -60,7 +61,8 @@ const OurPurpose = () => {
         direction="row"
         alignContent="center"
         justifyContent="center"
-        sx={{ width: "100%", height: "100%", marginTop: "80px" }}
+        
+        sx={{ width: "100%", height: "100%", marginTop: "80px" ,}}
       >
         {!loading &&
           data?.purposes?.map((purpose: any, index: number) => (
@@ -69,6 +71,18 @@ const OurPurpose = () => {
               // imageURL={purpose.imageURL}
               description={purpose.description}
               key={index}
+              cardSx={{ backgroundColor: "#fffbe0", boxShadow: 4 , backgroundSize: "cover",
+                backgroundPosition: "center",
+                height: 250,  // adjust as needed
+                display: "flex",
+                flexDirection: "column",
+             
+                justifyContent: "flex-end", // pushes text to bottom
+                padding: 2, // space for text
+                color: "#fff", // white text on image
+                position: "relative",backgroundImage:'url("https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")'}}
+              titleSx={{ color: "#3571dd", fontWeight: 600 }}
+              descriptionSx={{ fontStyle: "italic" ,color: "#f0f0f0"}}
             />
           ))}
       </Stack>

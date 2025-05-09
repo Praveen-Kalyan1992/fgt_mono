@@ -9,17 +9,25 @@ interface cardProps {
   title: string;
   description: string;
   imageURL?: string;
+  cardSx?: object;
+  contentSx?: object;
+  titleSx?: object;
+  descriptionSx?: object;
+  
 }
 
-const MediaCard = ({ title, description, imageURL }: cardProps) => {
+const MediaCard = ({ title, description, imageURL ,cardSx,
+  contentSx,
+  titleSx,
+  descriptionSx,}: cardProps) => {
   return (
-    <Card sx={{ width: "300px", height: "335px" }}>
-      <CardMedia sx={{ height: 140 }} image={imageURL} title="green iguana" />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+    <Card sx={{ width: "300px", height: "335px",...cardSx  }}>
+      <CardMedia sx={{ height: 140 }} image={imageURL} title="green iguana"  />
+      <CardContent  sx={contentSx} >
+        <Typography gutterBottom variant="h5" component="em" sx={titleSx}>
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" sx={descriptionSx}>
           {description}
         </Typography>
       </CardContent>

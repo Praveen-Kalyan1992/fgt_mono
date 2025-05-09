@@ -1,7 +1,9 @@
 import { gql, useQuery } from "@apollo/client";
 import { Box, Stack, Typography } from "@mui/material";
 import MediaCard from "../../../shared/components/Card/Card";
-import reptile from "../../../assets/images/contemplative-reptile.jpg";
+// import reptile1 from "../../../assets/images/contemplative-reptile1.jpg";
+// import reptile2 from "../../../assets/images/contemplative-reptile2.jpg";
+// import reptile3 from "../../../assets/images/contemplative-reptile3.jpg";
 
 const OurTeam = () => {
   const ALL_MEMBERS = gql`

@@ -2,6 +2,7 @@ import { gql, useQuery } from "@apollo/client";
 import { Box, Typography } from "@mui/material";
 import Carousel from "../../../shared/components/Carousel/Carousel";
 
+
 const OurFeatures = () => {
   const ALL_FEATURES = gql`
     query feature {
@@ -12,6 +13,7 @@ const OurFeatures = () => {
         name
         id
         description
+        imageUrl
       }
     }
   `;

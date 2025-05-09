@@ -30,6 +30,7 @@ module.exports = gql`
     description: String
     isActive: Boolean
     supportingDescription: [SupportingDescriptionInput!]!
+    imageUrl: String
   }
   type Team {
     id: ID!
@@ -45,6 +46,7 @@ module.exports = gql`
     description: String
     isActive: Boolean
     supportingDescription: [SupportingDescription]
+    imageUrl: String
   }
 
   input PartnerInput {

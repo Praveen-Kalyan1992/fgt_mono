@@ -6,7 +6,10 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Slide from "@mui/material/Slide";
 import Stack from "@mui/material/Stack";
 import FeatureCard from "../FeatureCard/FeatureCard";
-import discussionImage from "../../../assets/images/10.avif";
+// import discussionImage from "../../../assets/images/10.avif";
+// import feature1 from "../../../assets/images/contemplative-reptile1.jpg";
+// import feature2 from "../../../assets/images/contemplative-reptile2.jpg";
+// import feature3 from "../../../assets/images/contemplative-reptile3.jpg";
 
 interface carouselProps {
   data: any;
@@ -30,7 +33,7 @@ const Carousel = ({ data }: carouselProps) => {
   let listOfCards: React.ReactElement[] = [];
   data?.features.forEach((each: any, i: number) =>
     listOfCards.push(
-      <FeatureCard title={data?.features[i].name.toString()} imageURL={discussionImage} key={i} />
+      <FeatureCard title={data?.features[i].name.toString()} imageURL={data?.features[i].imageUrl} key={i} />
     )
   );
 

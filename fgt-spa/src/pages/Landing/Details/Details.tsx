@@ -21,7 +21,7 @@ const Details = () => {
       <img
         alt=""
         src={discussionImage}
-        className="absolute inset-0 -z-10 size-full object-cover object-right md:object-center"
+        className="bg-image absolute inset-0 -z-10 size-full object-cover object-right md:object-center"
       />
       <div
         aria-hidden="true"
@@ -62,7 +62,7 @@ const Details = () => {
             sx={{
               display: "block",
               letterSpacing: ".1rem",
-              color: "#d81b60",
+              color: "#006cbb",
             }}
           >
             We Build
@@ -78,7 +78,7 @@ const Details = () => {
               display: "block",
               letterSpacing: ".1rem",
               // color: "#3548dd",
-              color: "#d81b60",
+              color: "#006cbb",
             }}
           >
             Your Dream With Skill !!!
@@ -89,12 +89,9 @@ const Details = () => {
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold sm:grid-cols-2 md:flex lg:gap-x-10">
             {links.map((link) => (
               <a
-                className="cal-sans-regular"
+                className="cal-sans-regular fgt-color-stat"
                 key={link.name}
                 href={link.href}
-                style={{
-                  color: "#3548dd",
-                }}
               >
                 {link.name} <span aria-hidden="true">&rarr;</span>
               </a>
@@ -104,16 +101,10 @@ const Details = () => {
             {stats.map((stat) => (
               <div
                 key={stat.name}
-                className="flex flex-col-reverse gap-1 cal-sans-regular"
-                style={{
-                  color: "#3548dd",
-                }}
+                className="fgt-color-stat-white flex flex-col-reverse gap-1 cal-sans-regular"
               >
                 <dt
-                  className="text-base/7 text-gray-300"
-                  style={{
-                    color: "#DE3163",
-                  }}
+                  className="text-base/7 fgt-color-stat-white"
                 >
                   {stat.name}
                 </dt>

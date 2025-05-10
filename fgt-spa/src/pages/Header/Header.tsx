@@ -60,9 +60,10 @@ const Header = () => {
               mr: 2,
               display: { xs: "none", md: "flex" },
               letterSpacing: ".3rem",
-              color: "#d81b60", // Set color to transparent to apply gradient
+              // color: "#d81b60", // Set color to transparent to apply gradient
               backgroundClip: "text", // Ensures the gradient is applied to the text
               textDecoration: "none",
+              color: "#006cbb"
             }}
           >
             Futuristic Global Technology
@@ -139,7 +140,7 @@ const Header = () => {
                   my: 2,
                   textAlign: "left",
                   width: "100%",
-                  color: "#d81b60",
+                  color: "#006cbb",
                 }}
               >
                 {page.name}

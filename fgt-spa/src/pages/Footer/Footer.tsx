@@ -34,8 +34,7 @@ const Footer = () => {
             >
               <Typography
                 align="center"
-                color="#3571dd"
-                className="cal-sans-regular"
+                className="cal-sans-regular-400 fgt-color-stat" 
                 variant="h4"
                 component="h2"
               >
@@ -53,8 +52,7 @@ const Footer = () => {
             >
               <Typography
                 align="center"
-                color="#3571dd"
-                className="cal-sans-regular"
+                className="cal-sans-regular-400 fgt-color-stat" 
                 variant="h4"
                 component="h2"
               >
@@ -95,8 +93,7 @@ const Footer = () => {
             >
               <Typography
                 align="center"
-                color="#3571dd"
-                className="cal-sans-regular"
+                className="cal-sans-regular-400 fgt-color-stat" 
                 variant="h4"
                 component="h2"
               >

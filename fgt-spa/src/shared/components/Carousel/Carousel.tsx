@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
-import { Grid, IconButton, Paper, Typography } from "@mui/material";
+import { Button, Grid, IconButton, Paper, Typography } from "@mui/material";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Slide from "@mui/material/Slide";
 import Stack from "@mui/material/Stack";
 import FeatureCard from "../FeatureCard/FeatureCard";
+import SendIcon from '@mui/icons-material/Send';
 // import discussionImage from "../../../assets/images/10.avif";
 // import feature1 from "../../../assets/images/contemplative-reptile1.jpg";
 // import feature2 from "../../../assets/images/contemplative-reptile2.jpg";
@@ -33,7 +34,11 @@ const Carousel = ({ data }: carouselProps) => {
   let listOfCards: React.ReactElement[] = [];
   data?.features.forEach((each: any, i: number) =>
     listOfCards.push(
-      <FeatureCard title={data?.features[i].name.toString()} imageURL={data?.features[i].imageUrl} key={i} />
+      <FeatureCard
+        title={data?.features[i].name.toString()}
+        imageURL={data?.features[i].imageUrl}
+        key={i}
+      />
     )
   );
 
@@ -75,7 +80,7 @@ const Carousel = ({ data }: carouselProps) => {
         disabled={currentPage === 0}
       >
         {/* this is the button that will go to the previous page you can change these icons to whatever you wish*/}
-        <NavigateBeforeIcon />
+        <NavigateBeforeIcon className="fgt-color-stat-white" />
       </IconButton>
 
       <Box sx={{ width: "100%", height: "100%" }}>
@@ -112,7 +117,7 @@ const Carousel = ({ data }: carouselProps) => {
                     margin: "10px",
                     background: "#FAFAFA",
                     boxShadow: "none",
-                    border: "2px solid #8f4dce",
+                    border: "2px solid rgb(162 199 255)",
                     borderRadius: "20px",
                   }}
                   square
@@ -127,20 +132,19 @@ const Carousel = ({ data }: carouselProps) => {
                         }}
                       >
                         <Typography
+                          sx={{ padding: "20px" }}
                           align="center"
-                          color="red"
-                          fontFamily={`"Pattaya", sans-serif`}
-                          fontWeight={400}
-                          fontStyle={"normal"}
+                          className="cal-sans-regular"
                           variant="h4"
                           component="h2"
+                          color="#006cbb"
                         >
                           {data?.features[index].name}
                         </Typography>
-                         <Typography
+                        <Typography
+                          sx={{ padding: "20px" }}
                           align="center"
-                          color="#3571dd"
-                          fontFamily={`"Pattaya", sans-serif`}
+                          className="cal-sans-regular-400 fgt-color-stat"
                           fontWeight={400}
                           fontStyle={"normal"}
                           variant="h4"
@@ -148,7 +152,8 @@ const Carousel = ({ data }: carouselProps) => {
                         >
                           {data?.features[index].description}
                         </Typography>
-                        <Typography
+                        {/* <Typography
+                          sx={{ padding: "20px" }}
                           align="center"
                           color="red"
                           fontFamily={`"Pattaya", sans-serif`}
@@ -160,8 +165,11 @@ const Carousel = ({ data }: carouselProps) => {
                           {renderDescription(
                             data?.features[index]?.supportingDescription
                           )}
-                        </Typography>
-                       
+                        </Typography> */}
+                        <Box className="fgt-color-stat" sx={{ padding: "20px"}} textAlign="center">
+                          {/* <Button variant="outlined">Get Quotes Here</Button> */}
+                           <Button variant="outlined" endIcon={<SendIcon />}>Get Quotes Here</Button>
+                        </Box>
                       </Box>
                     </Grid>
                     <Grid size={{ xs: 4, md: 4 }}>{card}</Grid>
@@ -182,7 +190,7 @@ const Carousel = ({ data }: carouselProps) => {
           currentPage >= Math.ceil((cards.length || 0) / cardsPerPage) - 1
         }
       >
-        <NavigateNextIcon />
+        <NavigateNextIcon className="fgt-color-stat-white" />
       </IconButton>
     </Box>
   );

@@ -2,7 +2,6 @@ import { gql, useQuery } from "@apollo/client";
 import { Box, Typography } from "@mui/material";
 import Carousel from "../../../shared/components/Carousel/Carousel";
 
-
 const OurFeatures = () => {
   const ALL_FEATURES = gql`
     query feature {
@@ -29,13 +28,32 @@ const OurFeatures = () => {
       }}
     >
       <Typography
-        className="cal-sans-regular-400"
+        className="cal-sans-regular-600"
         align="center"
-        color="#3571dd"
+        color= "#006cbb"
         variant="h4"
         component="h2"
       >
-        Why Partnering With Us
+        Our Services
+      </Typography>
+
+      <Typography
+       className="fgt-color-stat-white"
+        variant="h6"
+        noWrap={false}
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          alignContent: "center",
+          justifyContent: "center",
+          letterSpacing: ".1rem",
+          // color: "#DE3163",
+          marginTop: "30px",
+        }}
+      >
+        We understand that technology is ever-evolving, and to stay ahead,
+        flexibility is key.
       </Typography>
 
       {/* <Typography

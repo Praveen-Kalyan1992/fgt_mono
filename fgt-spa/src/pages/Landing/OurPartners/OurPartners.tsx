@@ -25,17 +25,18 @@ const OurPartners = () => {
         marginTop: "60px",
       }}
     >
-      <Typography
+     <Typography
+        className="cal-sans-regular-600"
         align="center"
-        color="#3571dd"
-        className="cal-sans-regular-400"
+        color= "#006cbb"
         variant="h4"
         component="h2"
       >
         Colloborate With Us
       </Typography>
 
-      <Typography
+     <Typography
+       className="fgt-color-stat-white"
         variant="h6"
         noWrap={false}
         sx={{
@@ -44,11 +45,8 @@ const OurPartners = () => {
           alignItems: "center",
           alignContent: "center",
           justifyContent: "center",
-          fontFamily: `"Pattaya", sans-serif`,
-          fontWeight: 800,
-          fontStyle: "normal",
           letterSpacing: ".1rem",
-          color: "#DE3163",
+          // color: "#DE3163",
           marginTop: "30px",
         }}
       >

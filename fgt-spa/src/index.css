@@ -38,13 +38,16 @@ code {
 }
 
 .background-10 {
-  background: #43222e;
+  background: #2a84d3;
 }
 
 .fgt-fore-color {
   color: "#006cbb" !important;
 }
 
+.fgt-fore-white {
+  color: "#FFFFF" !important;
+}
 .bg-image {
   /* The image used */
   

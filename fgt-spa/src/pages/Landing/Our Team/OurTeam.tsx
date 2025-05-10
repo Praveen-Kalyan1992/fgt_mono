@@ -33,9 +33,7 @@ const OurTeam = () => {
       <Typography
         align="center"
         color="#3571dd"
-        fontFamily={`"Pattaya", sans-serif`}
-        fontWeight={800}
-        fontStyle={"normal"}
+        className="cal-sans-regular-400"
         variant="h4"
         component="h2"
       >

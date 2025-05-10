@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import discussionImage from "../../../assets/images/11.jpg";
-// import discussionImage from "../../../assets/images/10.avif";
 
 const Details = () => {
   const links = [
@@ -55,15 +54,13 @@ const Details = () => {
           }}
         >
           <Typography
+            className="cal-sans-regular"
             variant="h2"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
               display: "block",
-              fontFamily: `"Pattaya", sans-serif`,
-              fontWeight: 800,
-              fontStyle: "normal",
               letterSpacing: ".1rem",
               color: "#d81b60",
             }}
@@ -72,35 +69,30 @@ const Details = () => {
           </Typography>
 
           <Typography
+            className="cal-sans-regular"
             variant="h2"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
               display: "block",
-              fontFamily: `"Pattaya", sans-serif`,
-              fontWeight: 800,
-              fontStyle: "normal",
               letterSpacing: ".1rem",
               // color: "#3548dd",
-              color:"#d81b60",
+              color: "#d81b60",
             }}
           >
             Your Dream With Skill !!!
           </Typography>
           <Box sx={{ marginTop: "30px" }}></Box>
-
         </Box>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold sm:grid-cols-2 md:flex lg:gap-x-10">
             {links.map((link) => (
               <a
+                className="cal-sans-regular"
                 key={link.name}
                 href={link.href}
                 style={{
-                  fontFamily: `"Pattaya", sans-serif`,
-                  fontWeight: 800,
-                  fontStyle: "normal",
                   color: "#3548dd",
                 }}
               >
@@ -110,15 +102,21 @@ const Details = () => {
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
-              <div key={stat.name} className="flex flex-col-reverse gap-1"  style={{
-                fontFamily: `"Pattaya", sans-serif`,
-                fontWeight: 800,
-                fontStyle: "normal",
-                color: "#3548dd",
-              }}>
-                <dt className="text-base/7 text-gray-300" style={{
-                color: "#DE3163",
-              }}>{stat.name}</dt>
+              <div
+                key={stat.name}
+                className="flex flex-col-reverse gap-1 cal-sans-regular"
+                style={{
+                  color: "#3548dd",
+                }}
+              >
+                <dt
+                  className="text-base/7 text-gray-300"
+                  style={{
+                    color: "#DE3163",
+                  }}
+                >
+                  {stat.name}
+                </dt>
                 <dd className="text-4xl font-semibold tracking-tight">
                   {stat.value}
                 </dd>

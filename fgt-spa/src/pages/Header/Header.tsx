@@ -1,31 +1,35 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
+import AdbIcon from "@mui/icons-material/Adb";
 
 const Header = () => {
-  const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+  const settings = ["Profile", "Account", "Dashboard", "Logout"];
   const pages = [
-    { name: 'Home', href: '#', current: true },
+    { name: "Home", href: "#", current: true },
     // { name: 'Team', href: '#', current: false },
-    { name: 'Our Services', href: '#', current: false },
+    { name: "Our Services", href: "#", current: false },
     // { name: 'Offers', href: '#', current: false },
     // { name: 'Partners', href: '#', current: false },
-    { name: 'About US', href: '#', current: false },
-    { name: 'Contact', href: '#', current: false },
-  ]
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+    { name: "About US", href: "#", current: false },
+    { name: "Contact", href: "#", current: false },
+  ];
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
+    null
+  );
+  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
+    null
+  );
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -42,31 +46,29 @@ const Header = () => {
     setAnchorElUser(null);
   };
   return (
-    <AppBar position="fixed" color='primary'>
+    <AppBar position="fixed" color="primary">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
+            className="cal-sans-regular"
             variant="h6"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: `"Pattaya", sans-serif`,
-              fontWeight: 800,
-              fontStyle: "normal",
-              letterSpacing: '.3rem',
-              color: "#d81b60",  // Set color to transparent to apply gradient
-              backgroundClip: 'text',  // Ensures the gradient is applied to the text
-              textDecoration: 'none',
+              display: { xs: "none", md: "flex" },
+              letterSpacing: ".3rem",
+              color: "#d81b60", // Set color to transparent to apply gradient
+              backgroundClip: "text", // Ensures the gradient is applied to the text
+              textDecoration: "none",
             }}
           >
             Futuristic Global Technology
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -81,54 +83,64 @@ const Header = () => {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
+                vertical: "bottom",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: 'block', md: 'none' } }}
+              sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page: any) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'left', display: 'block', color: '#d81b60', fontFamily: `"Pattaya", sans-serif`,
-                  fontWeight: 800,
-                  fontStyle: "normal" }}>{page.name}</Typography>
+                  <Typography
+                   className="cal-sans-regular"
+                    sx={{
+                      textAlign: "left",
+                      display: "block",
+                      color: "#d81b60",
+                    }}
+                  >
+                    {page.name}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
+            className="cal-sans-regular"
             variant="h5"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'none' },
+              display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
             }}
           >
             FGT
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page: any) => (
               <Button
                 key={page.name}
+                className="cal-sans-regular"
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, textAlign: 'left', width: '100%', color: '#d81b60', fontFamily: `"Pattaya", sans-serif`,
-                  fontWeight: 800,
-                  fontStyle: "normal"}}
+                sx={{
+                  my: 2,
+                  textAlign: "left",
+                  width: "100%",
+                  color: "#d81b60",
+                }}
               >
                 {page.name}
               </Button>
@@ -141,24 +153,26 @@ const Header = () => {
               </IconButton>
             </Tooltip>
             <Menu
-              sx={{ mt: '45px' }}
+              sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
+                  <Typography sx={{ textAlign: "center" }}>
+                    {setting}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -167,6 +181,6 @@ const Header = () => {
       </Container>
     </AppBar>
   );
-}
+};
 
 export default Header;

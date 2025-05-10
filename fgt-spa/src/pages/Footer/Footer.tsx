@@ -4,7 +4,7 @@ import Icon from "@mui/material/Icon";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -16,7 +16,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-900 text-center text-white dark:bg-neutral-900">
+    <footer className="background-10 text-center text-white dark:bg-neutral-900">
       <Box
         sx={{
           width: "100%",
@@ -35,9 +35,7 @@ const Footer = () => {
               <Typography
                 align="center"
                 color="#3571dd"
-                fontFamily={`"Pattaya", sans-serif`}
-                fontWeight={400}
-                fontStyle={"normal"}
+                className="cal-sans-regular"
                 variant="h4"
                 component="h2"
               >
@@ -53,12 +51,10 @@ const Footer = () => {
                 width: "100%",
               }}
             >
-               <Typography
+              <Typography
                 align="center"
                 color="#3571dd"
-                fontFamily={`"Pattaya", sans-serif`}
-                fontWeight={400}
-                fontStyle={"normal"}
+                className="cal-sans-regular"
                 variant="h4"
                 component="h2"
               >
@@ -79,13 +75,13 @@ const Footer = () => {
               }}
             >
               <a href="https://www.instagram.com/fgtech.1507">
-              <InstagramIcon color="primary">add_circle</InstagramIcon>
+                <InstagramIcon color="primary">add_circle</InstagramIcon>
               </a>
               <a href="https://www.facebook.com">
-              <FacebookIcon color="primary">add_circle</FacebookIcon>
+                <FacebookIcon color="primary">add_circle</FacebookIcon>
               </a>
               <a href="https://www.linkedin.com">
-              <LinkedInIcon color="primary">add_circle</LinkedInIcon>
+                <LinkedInIcon color="primary">add_circle</LinkedInIcon>
               </a>
             </Box>
           </Grid>
@@ -100,9 +96,7 @@ const Footer = () => {
               <Typography
                 align="center"
                 color="#3571dd"
-                fontFamily={`"Pattaya", sans-serif`}
-                fontWeight={800}
-                fontStyle={"normal"}
+                className="cal-sans-regular"
                 variant="h4"
                 component="h2"
               >
@@ -115,7 +109,7 @@ const Footer = () => {
         {/* <!--Copyright section--> */}
         {/* <div className="bg-neutral-900 p-4 text-right text-neutral-400 dark:bg-neutral-700 dark:text-neutral-200"> */}
         <Box
-          className="bg-neutral-900 p-4 text-right text-neutral-400 dark:bg-neutral-700 dark:text-neutral-200"
+          className="background-10 p-4 text-right text-neutral-400 dark:bg-neutral-700 dark:text-neutral-200"
           sx={{
             width: "100%",
             marginTop: "227px",

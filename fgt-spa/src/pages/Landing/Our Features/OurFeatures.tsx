@@ -29,11 +29,9 @@ const OurFeatures = () => {
       }}
     >
       <Typography
+        className="cal-sans-regular-400"
         align="center"
         color="#3571dd"
-        fontFamily={`"Pattaya", sans-serif`}
-        fontWeight={800}
-        fontStyle={"normal"}
         variant="h4"
         component="h2"
       >

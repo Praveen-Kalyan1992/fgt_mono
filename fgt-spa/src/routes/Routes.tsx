@@ -4,6 +4,8 @@ import Landing from "../pages/Landing/Landing";
 import Header from "../pages/Header/Header";
 import Footer from "../pages/Footer/Footer";
 import Partners from "../pages/Landing/OurPartners/OurPartners";
+import Contact from "../pages/Contact/Contact";
+import About from "../pages/About/About";
 const Routes = () => {
     return (<Router>
         <Header />
@@ -17,8 +19,11 @@ const Routes = () => {
             <Route path="/robotics">
                 {/* <Robotics /> */}
             </Route>
-            <Route path="/conference">
-                {/* <Conference /> */}
+            <Route path="/aboutus">
+                <About />
+            </Route>
+             <Route path="/contact">
+                <Contact />
             </Route>
             <Route path="/">
                 <Landing />

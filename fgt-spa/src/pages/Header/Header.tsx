@@ -12,6 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { useHistory } from "react-router-dom";
 
 const Header = () => {
   const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -22,8 +23,9 @@ const Header = () => {
     // { name: 'Offers', href: '#', current: false },
     // { name: 'Partners', href: '#', current: false },
     { name: "About US", href: "#", current: false },
-    { name: "Contact", href: "#", current: false },
+    { name: "Contact", href: "/contact", current: false },
   ];
+  const navigate = useHistory();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -33,6 +35,17 @@ const Header = () => {
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
+    const element = event.currentTarget.innerText;
+    switch (element) {
+      case "CONTACT":
+        navigate.push("/contact");
+        break;
+      case "ABOUT US":
+        navigate.push("/aboutus");
+         break;
+      default:
+        navigate.push("/");
+    }
   };
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
@@ -63,7 +76,7 @@ const Header = () => {
               // color: "#d81b60", // Set color to transparent to apply gradient
               backgroundClip: "text", // Ensures the gradient is applied to the text
               textDecoration: "none",
-              color: "#006cbb"
+              color: "#006cbb",
             }}
           >
             Futuristic Global Technology
@@ -99,7 +112,7 @@ const Header = () => {
               {pages.map((page: any) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                   <Typography
-                   className="cal-sans-regular"
+                    className="cal-sans-regular"
                     sx={{
                       textAlign: "left",
                       display: "block",
@@ -135,7 +148,7 @@ const Header = () => {
               <Button
                 key={page.name}
                 className="cal-sans-regular"
-                onClick={handleCloseNavMenu}
+                onClick={handleOpenNavMenu}
                 sx={{
                   my: 2,
                   textAlign: "left",

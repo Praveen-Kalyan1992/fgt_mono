@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { useHistory } from "react-router-dom";
+import Logo from "../../shared/components/Logo/Logo";
 
 const Header = () => {
   const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -42,7 +43,7 @@ const Header = () => {
         break;
       case "ABOUT US":
         navigate.push("/aboutus");
-         break;
+        break;
       default:
         navigate.push("/");
     }
@@ -62,7 +63,9 @@ const Header = () => {
     <AppBar position="fixed" color="primary">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+           */}
+          <Logo />
           <Typography
             className="cal-sans-regular"
             variant="h6"

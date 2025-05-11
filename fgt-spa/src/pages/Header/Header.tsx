@@ -82,7 +82,7 @@ const Header = () => {
               color: "#006cbb",
             }}
           >
-            Futuristic Global Technology
+            Futuristic Global Technologies
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

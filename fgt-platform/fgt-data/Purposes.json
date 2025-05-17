@@ -5,28 +5,28 @@
       "title": "Innovation with Purpose",
       "description": "We build solutions that solve real-world problems, not just showcase trends.",
       "isActive": true,
-      "imageUrl": ""
+      "imageUrl": "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg"
     },
     {
       "id": 2,
       "title": "Client-Centric Approach",
       "description": "We listen, understand, and create from scratch—tailored to each client's vision.",
       "isActive": true,
-      "imageUrl": ""
+      "imageUrl": "https://computercures.com.au/wp-content/uploads/2023/10/video-editing-PC.jpg"
     },
     {
       "id": 3,
       "title": "Agility & Scalability",
       "description": "We adapt quickly and build with scale in mind, ensuring long-term growth.",
       "isActive": true,
-      "imageUrl": ""
+      "imageUrl": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
     },
     {
       "id": 4,
       "title": "Integrity & Collaboration",
       "description": "We believe in transparent partnerships and working as one team.",
       "isActive": true,
-      "imageUrl": ""
+      "imageUrl": "https://www.exhibit.tech/wp-content/uploads/2024/07/custom-build-pc-for-gaming-and-vfx-editing-by-exhibit-staff.webp"
     }
   ]
 }

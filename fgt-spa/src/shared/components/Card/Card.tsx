@@ -13,6 +13,7 @@ interface cardProps {
   contentSx?: object;
   titleSx?: object;
   descriptionSx?: object;
+  className?: string;
   
 }
 

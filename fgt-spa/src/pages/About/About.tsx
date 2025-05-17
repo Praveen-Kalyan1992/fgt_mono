@@ -32,10 +32,10 @@ const About: React.FC = () => {
       <Paper
         elevation={3}
         sx={{
-          backgroundImage: 'url("https://via.placeholder.com/1200x400?text=AI+Generated+About+Us+Hero+Image")',
+          backgroundImage: 'url("https://as1.ftcdn.net/v2/jpg/05/34/47/76/1000_F_534477643_VyoHZtC6ribT0y5zuucDInuy88wOErWZ.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          height: 400,
+          height: 550,
           marginBottom: '2rem'
         }}
       >

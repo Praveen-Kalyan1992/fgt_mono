@@ -57,30 +57,41 @@ const OurPurpose = () => {
         alignContent="center"
         justifyContent="center"
         
-        sx={{ width: "100%", height: "100%", marginTop: "80px" ,}}
+        sx={{ width: "100%", height: "100%", marginTop: "80px" ,"&:hover .hover-card:not(:hover)": {
+      opacity: 0.3,
+    },}}
       >
-        {!loading &&
-          data?.purposes?.map((purpose: any, index: number) => (
-            <MediaCard
-              title={purpose.title}
-              // imageURL={purpose.imageURL}
-              description={purpose.description}
-              key={index}
-              cardSx={{ backgroundColor: "#fffbe0", boxShadow: 4 , backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: 250,  // adjust as needed
-                display: "flex",
-                flexDirection: "column",
-             
-                justifyContent: "flex-end", // pushes text to bottom
-                padding: 2, // space for text
-                color: "#fff", // white text on image
-                position: "relative",backgroundImage:'url("https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")'}}
-              titleSx={{ color: "#3571dd", fontWeight: 600 }}
-              descriptionSx={{ fontStyle: "italic" ,color: "#f0f0f0"}}
-            />
-          ))}
-      </Stack>
+       {!loading &&
+    data?.purposes?.map((purpose: any, index: number) => (
+      <MediaCard
+        title={purpose.title}
+        description={purpose.description}
+        key={index}
+        className="hover-card"
+        cardSx={{
+          backgroundColor: "#fffbe0",
+          boxShadow: 4,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: 250,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          padding: 2,
+          color: "#fff",
+          position: "relative",
+          backgroundImage: 'url("https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+          transition: "0.5s ease",
+          cursor: "pointer",
+          "&:hover": {
+            transform: "scale(1.1)",
+          },
+        }}
+        titleSx={{ color: "#3571dd", fontWeight: 600 }}
+        descriptionSx={{ fontStyle: "italic", color: "#f0f0f0" }}
+      />
+    ))}
+</Stack>
     </Box>
   );
 };

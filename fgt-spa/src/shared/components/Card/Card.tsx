@@ -25,18 +25,18 @@ const MediaCard = ({ title, description, imageURL ,cardSx,
     <Card sx={{ width: "300px", height: "335px",...cardSx  }}>
       <CardMedia sx={{ height: 140 }} image={imageURL} title="green iguana"  />
       <CardContent  sx={contentSx} >
-        <Typography gutterBottom variant="h5" component="em" sx={titleSx}>
-          {title}
-        </Typography>
-        <Typography variant="body2" color="text.secondary" sx={descriptionSx}>
+        <Typography variant="body2" sx={descriptionSx}>
           {description}
         </Typography>
+         <Typography gutterBottom variant="h5" component="em" sx={titleSx}>
+          {title}
+        </Typography>
       </CardContent>
-      <CardActions>
-        {/* <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button> */}
-        <Button size="small">View More</Button>
-      </CardActions>
+       {/* <CardActions>
+       <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button> 
+       <Button size="small">View More</Button> 
+      </CardActions>*/}
     </Card>
   );
 };

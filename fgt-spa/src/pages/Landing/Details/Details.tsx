@@ -1,6 +1,58 @@
 import { Box, Typography } from "@mui/material";
 import discussionImage from "../../../assets/images/11.jpg";
+import { motion } from "framer-motion";
+import { useRef, useEffect } from "react";
+import { animate, stagger } from "framer-motion";
 
+function WavyText({ text }: { text: string }) {
+  const containerRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const chars = Array.from(container.querySelectorAll(".split-char"));
+    const staggerDelay = 0.15;
+
+    animate(
+      chars,
+      { y: [-20, 20] },
+      {
+        repeat: Infinity,
+        repeatType: "mirror",
+        ease: "easeInOut",
+        duration: 2,
+        delay: stagger(staggerDelay, {
+          startDelay: -staggerDelay * chars.length,
+        }),
+      }
+    );
+  }, []);
+
+  return (
+    <span className="wavy-text" ref={containerRef}>
+      {text.split("").map((char, idx) => (
+        <span key={idx} className="split-char inline-block">
+          {char === " " ? "\u00A0" : char}
+        </span>
+      ))}
+      <style>{`
+        .wavy-text {
+          display: inline-block;
+        }
+
+        .split-char {
+          display: inline-block;
+          will-change: transform;
+        }
+      `}</style>
+    </span>
+  );
+}
+
+
+const MotionTypography = motion(Typography);
+const MotionBox = motion(Box);
 const Details = () => {
   const links = [
     { name: "Open roles", href: "#" },
@@ -53,7 +105,7 @@ const Details = () => {
             marginTop: "30px",
           }}
         >
-          <Typography
+          {/* <Typography
             className="cal-sans-regular"
             variant="h2"
             noWrap
@@ -83,7 +135,80 @@ const Details = () => {
           >
             Your Dream With Skill !!!
           </Typography>
-          <Box sx={{ marginTop: "30px" }}></Box>
+          <Box sx={{ marginTop: "30px" }}></Box> */}
+          {
+          <MotionBox
+  sx={{ marginTop: "30px" }}
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <MotionTypography
+    className="cal-sans-regular"
+    variant="h2"
+    component="div"
+    sx={{
+      display: "block",
+      letterSpacing: ".1rem",
+      color: "#006cbb",
+    }}
+    initial={{ opacity: 0, x: -30 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.9 }}
+  >
+    <WavyText text="We Build Your Dream With Skill !!!" />
+  </MotionTypography>
+
+  <Box sx={{ marginTop: "30px" }} />
+</MotionBox>/* {<MotionBox
+            sx={{ marginTop: "30px" }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <MotionTypography
+              className="cal-sans-regular"
+              variant="h2"
+              noWrap
+              component="a"
+              href="#app-bar-with-responsive-menu"
+              sx={{
+                display: "block",
+                letterSpacing: ".1rem",
+                color: "#006cbb",
+              }}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+            //   initial={{  x: 0 }}
+            //   animate={{  x: -100 }}
+            //  transition={{ type: "spring", stiffness: 100 }}
+            >
+              We Build
+            </MotionTypography>
+
+            <MotionTypography
+              className="cal-sans-regular"
+              variant="h2"
+              noWrap
+              component="a"
+              href="#app-bar-with-responsive-menu"
+              sx={{
+                display: "block",
+                letterSpacing: ".1rem",
+                color: "#006cbb",
+              }}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.9 }}
+            >
+              Your Dream With Skill !!!
+            </MotionTypography>
+
+            <Box sx={{ marginTop: "30px" }} />
+
+          </MotionBox>} */}
+
         </Box>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold sm:grid-cols-2 md:flex lg:gap-x-10">

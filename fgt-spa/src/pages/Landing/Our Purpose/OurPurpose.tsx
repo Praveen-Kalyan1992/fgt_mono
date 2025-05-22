@@ -2,6 +2,8 @@ import { gql, useQuery } from "@apollo/client";
 import { Box, Stack, Typography } from "@mui/material";
 import MediaCard from "../../../shared/components/Card/Card";
 import reptile from "../../../assets/images/contemplative-reptile.jpg";
+import { Brightness1 } from "@mui/icons-material";
+import { transform } from "typescript";
 
 const OurPurpose = () => {
   const ALL_PURPOSES = gql`
@@ -86,7 +88,9 @@ const OurPurpose = () => {
           transition: "0.5s ease",
           cursor: "pointer",
           "&:hover": {
-            transform: "scale(1.1)",
+            // transform: "scale(1.1)",
+            filter:"Brightness(0.6)",
+            transform:"translateZ(120px) rotate(360deg) scale(1.1)",
           },
         }}
         titleSx={{ color: "#f0f0f0", fontWeight: 600 }}

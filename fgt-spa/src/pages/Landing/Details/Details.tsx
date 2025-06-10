@@ -146,7 +146,6 @@ const Details = () => {
   <MotionTypography
     className="cal-sans-regular"
     variant="h2"
-    component="div"
     sx={{
       display: "block",
       letterSpacing: ".1rem",

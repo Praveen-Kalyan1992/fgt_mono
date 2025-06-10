@@ -1,0 +1,1 @@
+export const PAGE_TITLE = 'FGT - Leading IT Services Provider from India';

@@ -12,7 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import Logo from "../../shared/components/Logo/Logo";
 import TextReveal from "./RevealText";
 
@@ -27,7 +27,7 @@ const Header = () => {
     { name: "About US", href: "#", current: false },
     { name: "Contact", href: "/contact", current: false },
   ];
-  const navigate = useHistory();
+  // const navigate = useHistory();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -38,16 +38,16 @@ const Header = () => {
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
     const element = event.currentTarget.innerText;
-    switch (element) {
-      case "CONTACT":
-        navigate.push("/contact");
-        break;
-      case "ABOUT US":
-        navigate.push("/aboutus");
-        break;
-      default:
-        navigate.push("/");
-    }
+    // switch (element) {
+    //   case "CONTACT":
+    //     navigate.push("/contact");
+    //     break;
+    //   case "ABOUT US":
+    //     navigate.push("/aboutus");
+    //     break;
+    //   default:
+    //     navigate.push("/");
+    // }
   };
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);

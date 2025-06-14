@@ -26,6 +26,7 @@ import ContactMailIcon from "@mui/icons-material/ContactMail";
 import MenuIcon from "@mui/icons-material/Menu";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import AppRoutes from "./routes/Routes";
+import Footer from "./pages/Footer/Footer";
 
 const navItems = [
   { text: "Home", icon: <HomeIcon />, path: "/home" },
@@ -69,7 +70,7 @@ const App: React.FC = () => {
       <CssBaseline />
       <Router>
         <Box sx={{ display: "flex", minHeight: "100vh" }}>
-          {!isMobile && (
+          {/* {!isMobile && (
             <Box sx={{ width: 240, bgcolor: "background.paper", borderRight: 1, borderColor: "divider" }}>
               <Toolbar>
                 <Typography variant="h6" noWrap>
@@ -87,10 +88,10 @@ const App: React.FC = () => {
                 ))}
               </List>
             </Box>
-          )}
+          )} */}
 
           <Box sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}>
-            <AppBar position="static">
+            {/* <AppBar position="static">
               <Toolbar>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                   {isMobile && "My Website"}
@@ -102,21 +103,22 @@ const App: React.FC = () => {
                   </IconButton>
                 )}
               </Toolbar>
-            </AppBar>
+            </AppBar> */}
 
-            <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
+            {/* <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
               {drawerContent}
-            </Drawer>
+            </Drawer> */}
 
-            <Box component="main" sx={{ p: 3, flexGrow: 1 }}>
+            <Box component="main" sx={{ flexGrow: 1 }}>
               <AppRoutes />
             </Box>
 
-            <Box component="footer" sx={{ py: 4, bgcolor: "grey.200", textAlign: "center" }}>
+            {/* <Box component="footer" sx={{ py: 4, bgcolor: "grey.200", textAlign: "center" }}>
               <Typography variant="body2" color="text.secondary">
                 © 2025 My Website. All rights reserved.
               </Typography>
-            </Box>
+            </Box> */}
+            <Footer />
           </Box>
         </Box>
       </Router>

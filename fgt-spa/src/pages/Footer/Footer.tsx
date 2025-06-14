@@ -1,4 +1,4 @@
-import { Box, Grid, Link, Paper, Typography } from "@mui/material";
+import { Box, Grid, Link, Typography } from "@mui/material";
 // import { styled } from "@mui/material/styles";
 // import Icon from "@mui/material/Icon";
 import InstagramIcon from "@mui/icons-material/Instagram";

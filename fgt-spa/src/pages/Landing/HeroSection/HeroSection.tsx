@@ -93,8 +93,8 @@ const HeroSection = () => (
           component="img"
           sx={{
             // position: "absolute",
-            width: "400px",
-            height: "400px",
+            width: "280px",
+            height: "380px",
             top: "-10px",
             left: "-60px",
           }}

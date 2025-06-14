@@ -2,8 +2,8 @@
 import { motion } from "framer-motion";
 // import useBreadcrumbs from "../../utils/hooks/useBreadcrumbs";
 import usePageTitle from "../../utils/hooks/usePageTitle";
-import Header from "./Header/Header";
 import Banner from "./Banner/Banner";
+import Header from "./Header/Header";
 // import Footer from "../Footer/Footer";
 
 const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (

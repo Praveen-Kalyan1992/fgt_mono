@@ -5,7 +5,7 @@ import { serviceCards } from "../Banner/Banner";
 const ValuePropositionSection = () => (
   <Box
     sx={{
-      top: "80px",
+      top: "130px",
       position: "relative",
       width: "100%",
       height: "982px",
@@ -128,7 +128,7 @@ const ValuePropositionSection = () => (
           sx={{
             position: "absolute",
             top: "31px",
-            left: "201px",
+            left: "350px",
             fontFamily: "Roboto, Helvetica",
             fontWeight: 500,
             fontSize: "57px",

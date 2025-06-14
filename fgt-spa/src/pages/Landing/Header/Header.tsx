@@ -155,13 +155,13 @@ const Header = () => {
                 fontFamily: "'Montserrat-SemiBold', Helvetica",
                 fontWeight: 600,
                 fontSize: "16px",
-                color: "primary.main",
+                color: "000000",
                 lineHeight: "normal",
               }}
             >
               Futuristic Global&nbsp;&nbsp;
               <br />
-              technologies
+              Technologies
             </Typography>
           </Box>
 

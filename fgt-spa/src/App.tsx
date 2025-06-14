@@ -50,21 +50,6 @@ const App: React.FC = () => {
     setDrawerOpen(open);
   };
 
-  const drawerContent = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-      <List>
-        {navItems.map(({ text, icon, path }) => (
-          // button
-          <ListItem  component={Link} to={path} key={text}>
-            <ListItemIcon>{icon}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-    </Box>
-  );
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

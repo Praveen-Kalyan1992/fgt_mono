@@ -2,7 +2,8 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import ScreenShareIcon from "@mui/icons-material/ScreenShare";
 import women from '../../../assets/images/woman.png'
-import representation from '../../../assets/images/representation.png'
+import representation from '../../../assets/images/representation.png';
+import main from '../../../assets/images/main.png';
 
 
 const HeroSection = () => (
@@ -44,7 +45,7 @@ const HeroSection = () => (
           <Box
             component="img"
             sx={{
-              position: "absolute",
+              // position: "absolute",
               width: "380px",
               height: "380px",
               top: "-30px",
@@ -73,7 +74,7 @@ const HeroSection = () => (
               objectFit: "cover",
             }}
             alt="Image"
-            src="./image-1.png"
+            src={main}
           />
         </Box>
       </Box>
@@ -83,7 +84,7 @@ const HeroSection = () => (
           width: "280px",
           height: "380px",
           top: "228px",
-          left: "1200px",
+          left: "1550px",
           borderRadius: "32px",
           overflow: "hidden",
         }}
@@ -91,7 +92,7 @@ const HeroSection = () => (
         <Box
           component="img"
           sx={{
-            position: "absolute",
+            // position: "absolute",
             width: "400px",
             height: "400px",
             top: "-10px",
@@ -101,8 +102,8 @@ const HeroSection = () => (
           src={representation}
         />
       </Box>
-      {/* <Typography
-        variant="h2"
+      <Typography
+        variant="h4"
         sx={{
           position: "absolute",
           top: "245px",
@@ -112,15 +113,15 @@ const HeroSection = () => (
         }}
       >
         We grow with your business, not just deliver and disappear.
-      </Typography> */}
+      </Typography>
       <Typography
         variant="h1"
         sx={{
-          position: "absolute",
-          top: "93px",
-          left: "222px",
+          // position: "absolute",
+          // top: "93px",
+          // left: "222px",
           textAlign: "center",
-          fontWeight: 500,
+          fontWeight: 100,
         }}
       >
         Lorem ipsum dolor sit amet, consectetur <br />

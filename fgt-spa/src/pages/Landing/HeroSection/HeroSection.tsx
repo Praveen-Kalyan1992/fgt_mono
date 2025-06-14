@@ -9,6 +9,7 @@ import main from '../../../assets/images/main.png';
 const HeroSection = () => (
   <Box
     sx={{
+      top: "40px",
       p: 4,
       bgcolor: "background.paper",
       height: "882px",
@@ -59,8 +60,8 @@ const HeroSection = () => (
         <Box
           sx={{
             position: "absolute",
-            width: "888px",
-            height: "448px",
+            width: "105%",
+            height: "500px",
             top: "120px",
             left: "296px",
           }}
@@ -68,10 +69,9 @@ const HeroSection = () => (
           <Box
             component="img"
             sx={{
-              width: "889px",
-              height: "448px",
+              width: "150%",
+              height: "500px",
               position: "absolute",
-              objectFit: "cover",
             }}
             alt="Image"
             src={main}

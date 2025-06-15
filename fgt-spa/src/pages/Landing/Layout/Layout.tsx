@@ -34,6 +34,28 @@ export const serviceCards = [
   },
 ];
 
+export const footerCards = [
+  {
+    title: "Client-Centric",
+    description:
+      "We maintain constant communication and make sure your voice remains central throughout the process.",
+    icon: <HeroSection.ServiceIcon />,
+  },
+  {
+    title: "Agile-Driven",
+    description:
+      "We follow Agile methodology to adapt, iterate, and deliver fast — keeping you in the loop, every step of the way.",
+    icon: <HeroSection.PlaceholderIcon />,
+  },
+  {
+    title: "Cost-Effective",
+    description:
+      "Our development process is lean and focused, eliminating unnecessary expenses while maintaining top-tier delivery.",
+    icon: <HeroSection.PlaceholderIcon />,
+  },
+
+];
+
 // Mock data for web development services
 export const webServices = [
   { title: "Web Development" },

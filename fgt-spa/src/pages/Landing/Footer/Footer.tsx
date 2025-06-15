@@ -1,30 +1,41 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
+import Card from "./Card/Card";
+import { footerCards } from "../Layout/Layout";
 
 const Footer = () => (
   <Box
     component="footer"
     sx={{
+      top: "200px",
       position: "relative",
       width: "100%",
-      height: "543px",
+      height: "500px",
       bgcolor: "background.paper",
       overflow: "hidden",
     }}
   >
-    <Box
-      component="img"
+    <Grid
+      container
+      spacing={8}
       sx={{
-        width: "1544px",
-        height: "152px",
+        maxWidth: "100%",
+        overflowX: "hidden",
+        height: "280px",
         position: "absolute",
-        top: "391px",
-        left: "-16px",
-        objectFit: "cover",
+        left: "127px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexWrap: "nowrap",
       }}
-      alt="Image"
-      src="./image-2.png"
-    />
+    >
+      {footerCards.map((card, index) => (
+        <Grid key={index} size={{ xs: 3, md: 4 }}>
+          <Card />
+        </Grid>
+      ))}
+    </Grid>
   </Box>
 );
 

@@ -119,7 +119,7 @@ const Header = () => {
                     height: 3,
                     top: 18,
                     left: 0,
-                    bgcolor: "secondary.main",
+                   bgcolor: "primary.main",
                     borderRadius: "60px",
                   }}
                 />
@@ -130,7 +130,7 @@ const Header = () => {
                     height: 3,
                     top: 18,
                     left: 0,
-                    bgcolor: "secondary.main",
+                    bgcolor: "primary.main",
                     borderRadius: "60px",
                     transform: "rotate(90deg)",
                   }}
@@ -175,7 +175,7 @@ const Header = () => {
           >
             {/* Phone Contact */}
             <Stack direction="row" spacing={3} alignItems="center">
-              <PhoneIcon sx={{ width: 35.52, height: 35, color: "#666666" }} />
+              <PhoneIcon sx={{ width: 35.52, height: 35, color: "secondary.main" }} />
               <Box>
                 <Typography
                   variant="subtitle1"
@@ -207,7 +207,7 @@ const Header = () => {
               sx={{
                 width: 48,
                 height: 48,
-                bgcolor: "secondary.light",
+                bgcolor: "#ef6d58",
                 borderRadius: "24px",
                 "&:hover": {
                   bgcolor: "secondary.main",

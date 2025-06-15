@@ -16,13 +16,13 @@ import React from "react";
 // Navigation items data
 const navItems = [
   { name: "HOME", active: true },
-  { name: "ABOUT", active: false },
-  { name: "SERVICES", active: false },
-  { name: "PORTFOLIO", active: false },
+  { name: "ABOUT", active: false, href: "/about" },
+  { name: "SERVICES", active: false, href: "/services" },
+  { name: "PORTFOLIO", active: false, href: "/portfolio" },
   {
     name: "CONTACT US",
     active: false,
-    href: "https://www.figma.com/design/HMVK6lAA4jQbi9Z0gzpsIn?node-id=63-4645",
+    href: "/contact",
   },
 ];
 

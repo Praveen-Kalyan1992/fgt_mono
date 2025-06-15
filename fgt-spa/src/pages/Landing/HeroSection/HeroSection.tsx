@@ -18,9 +18,7 @@ const HeroSection = () => {
         p: 4,
         bgcolor: "background.paper",
         height: "898px",
-        // width: "1512px",
         position: "relative",
-        border: "1px solid yellow",
       }}
     >
       <Box
@@ -28,7 +26,6 @@ const HeroSection = () => {
           position: "relative",
           height: "850px",
           borderRadius: "16px 16px 0 0",
-           border: "1px solid yellow",
         }}
       >
         <Box
@@ -38,7 +35,6 @@ const HeroSection = () => {
             height: "568px",
             top: "298px",
             left: 0,
-             border: "1px solid yellow",
           }}
         >
           <Box
@@ -50,7 +46,6 @@ const HeroSection = () => {
               left: 0,
               borderRadius: "32px",
               overflow: "hidden",
-               border: "1px solid yellow",
             }}
           >
             <Box

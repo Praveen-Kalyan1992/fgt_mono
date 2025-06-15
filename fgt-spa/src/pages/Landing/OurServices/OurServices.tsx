@@ -1,13 +1,18 @@
 import React from "react";
-import { Box, Typography, Paper, List, ListItem, IconButton } from "@mui/material";
+import { Box, Typography, Paper, List, ListItem, IconButton, useMediaQuery, useTheme } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { webServices } from "../Layout/Layout";
 
-const OurServices = () => (
+const OurServices= () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // <600px
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md")); // 600-900px
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md")); // >900px
+  return(
   <Box
     sx={{
-      top: "200px",
+      top: isMobile ? "200px" : isTablet ? "200px" : "217px",
       position: "relative",
       width: "100%",
       height: "982px",
@@ -185,5 +190,6 @@ const OurServices = () => (
     </Box>
   </Box>
 );
+}
 
 export default OurServices;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Grid, Card, CardContent, useTheme, useMediaQuery } from "@mui/material";
 import { serviceCards } from "../Layout/Layout";
-import middle from "../../../assets/images/middle.png";
+import vivid from "../../../assets/images/vivid.png";
 
 const ValueProposition = () => {
   const theme = useTheme();
@@ -11,12 +11,12 @@ const ValueProposition = () => {
   return (
     <Box
       sx={{
-        border: "2px solid green",
-        top: "200px",
+        top: isMobile ? "200px" : isTablet ? "200px" : "220px",
         position: "relative",
         height: "982px",
-        background:
-          "linear-gradient(270deg, rgba(255,255,255,1) 27%, rgba(129,139,244,1) 76%)",
+         borderRadius: "0 280px 0 280px",
+          background:
+          "linear-gradient(270deg, rgba(255, 255, 255, 1) 27%, rgb(149 129 255) 76%)",
       }}
     >
       {/* Why Us Section */}
@@ -25,13 +25,12 @@ const ValueProposition = () => {
           position: "absolute",
           width: "100%",
           height: "682px",
-          top: "300px",
+          top: isMobile ? "64px" : isTablet ? "64px" : "61px",
           left: 0,
           borderRadius: "0 280px 0 280px",
-          backgroundImage: "url(/vivid-blurred-colorful-background.png)",
+          backgroundImage: "url(src/assets/images/vivid.png)",
           backgroundSize: "cover",
           backgroundPosition: "50% 50%",
-          border: "1px solid green",
           
         }}
       >
@@ -39,7 +38,7 @@ const ValueProposition = () => {
           <Box
             sx={{
               display: "flex",
-              width: "1512px",
+              width: "100%",
               height: "682px",
               paddingLeft: "240px",
               paddingRight: "0px",
@@ -51,68 +50,18 @@ const ValueProposition = () => {
               left: 0,
             }}
           >
-            <Box sx={{ position: "relative", width: "510px", height: "374px"}}>
-              <Box
+                <Box
                 component="img"
                 sx={{
                   position: "absolute",
-                  width: "510px",
-                  height: "374px",
-                  // top: "18px",
                   left: 0,
                   objectFit: "cover",
+                  width: isMobile ? "100%" : isTablet ? "100%" : "100%",
                 }}
                 alt="Middle aged hispanic"
-                src={middle}
+                src={vivid}
               />
             </Box>
-            <Box sx={{ position: "relative", flexGrow: 1, p: 4 }}>
-              <Typography
-                variant="body2"
-                sx={{
-                  position: "relative",
-                  height: "357px",
-                  width: "458px",
-                  color: "white",
-                }}
-              >
-                At FGT, we turn ideas into powerful digital experiences —
-                powered by the perfect blend of experienced hands and young
-                creative minds. From web and mobile apps to custom software, we
-                build smart solutions that help your business grow and connect
-                with the world. Anyone can write code — but it takes true
-                expertise to build solutions that are reliable, future-ready,
-                and aligned with your real business goals
-              </Typography>
-            </Box>
-          </Box>
-          <Box
-            sx={{
-              width: "100%",
-              position: "absolute",
-              top: "130px",
-              left: "10px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              p: 4,
-              border: "1px solid red",
-            }}
-          >
-            <Typography
-              variant="h4"
-              sx={{
-                fontWeight: "bold",
-                color: "white",
-                fontSize: "3rem",
-                letterSpacing: "0.96px",
-                lineHeight: "2rem",
-                whiteSpace: "nowrap",
-              }}
-            >
-              WHY US
-            </Typography>
-          </Box>
         </Box>
       </Box>
       {/* Services Cards Section */}
@@ -125,7 +74,6 @@ const ValueProposition = () => {
           left: 0,
           bgcolor: "background.paper",
           borderRadius: "0 0 0 280px",
-          border: "1px solid red",
         }}
       >
         <Typography

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import usePageTitle from "../../utils/hooks/usePageTitle";
 import Banner from "./Banner/Banner";
 import Header from "./Header/Header";
+import { Box } from "@mui/material";
 // import Footer from "../Footer/Footer";
 
 const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -21,13 +22,13 @@ const Landing = () => {
   usePageTitle();
   // const breadcrumbs = useBreadcrumbs();
   return (
-    <>
+     <Box sx={{ maxWidth: "100%", overflowX: "hidden", border: "3px solid red", }}>
       <PageWrapper>
         <Header />
         {/* {breadcrumbs} */}
         <Banner />
       </PageWrapper>
-    </>
+    </Box>
   );
 };
 

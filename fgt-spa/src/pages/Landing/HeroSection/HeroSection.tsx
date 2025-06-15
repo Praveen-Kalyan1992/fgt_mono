@@ -20,6 +20,7 @@ const HeroSection = () => {
         height: "898px",
         // width: "1512px",
         position: "relative",
+        border: "1px solid yellow",
       }}
     >
       <Box
@@ -27,15 +28,17 @@ const HeroSection = () => {
           position: "relative",
           height: "850px",
           borderRadius: "16px 16px 0 0",
+           border: "1px solid yellow",
         }}
       >
         <Box
           sx={{
             position: "absolute",
-            width: "1184px",
+            width: "100%",
             height: "568px",
             top: "298px",
             left: 0,
+             border: "1px solid yellow",
           }}
         >
           <Box
@@ -47,6 +50,7 @@ const HeroSection = () => {
               left: 0,
               borderRadius: "32px",
               overflow: "hidden",
+               border: "1px solid yellow",
             }}
           >
             <Box
@@ -75,7 +79,7 @@ const HeroSection = () => {
           <Box
             sx={{
               position: "absolute",
-              width: "105%",
+              width: "100%",
               height: "500px",
               top: "120px",
               left: "296px",
@@ -86,12 +90,11 @@ const HeroSection = () => {
               sx={
                 isTablet || isMobile
                   ? {
-                      // width: "150%",
                       height: "500px",
                       position: "absolute",
                     }
                   : {
-                      width: "70%",
+                      width: "55%",
                       height: "500px",
                       position: "absolute",
                     }

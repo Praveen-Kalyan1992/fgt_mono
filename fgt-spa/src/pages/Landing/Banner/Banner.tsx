@@ -46,14 +46,12 @@ export const webServices = [
 
 const Banner = () => {
   return (
-    <Box sx={{ maxWidth: "100%", overflowX: "hidden" }}>
-      <Box sx={{ display: "flex", flexDirection: "column", overflowY: "scroll" }}>
-        <HeroSection />
-        <ValuePropositionSection />
-        <OurServices />
-        <Contact />
-        <Footer />
-      </Box>
+    <Box sx={{ display: "flex", flexDirection: "column" }}>
+      <HeroSection />
+      <ValuePropositionSection />
+      {/* <OurServices />
+      <Contact />
+      <Footer /> */}
     </Box>
   );
 };

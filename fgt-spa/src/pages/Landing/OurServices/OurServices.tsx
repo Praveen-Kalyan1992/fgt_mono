@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, Paper, List, ListItem, IconButton } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { webServices } from "../Banner/Banner";
+import { webServices } from "../Layout/Layout";
 
 const OurServices = () => (
   <Box

@@ -44,7 +44,7 @@ export const webServices = [
   { title: "" },
 ];
 
-const Banner = () => {
+const Layout = () => {
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
       <HeroSection />
@@ -56,4 +56,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default Layout;

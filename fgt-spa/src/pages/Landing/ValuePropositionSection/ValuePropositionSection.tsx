@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Grid, Card, CardContent, useTheme, useMediaQuery } from "@mui/material";
-import { serviceCards } from "../Banner/Banner";
+import { serviceCards } from "../Layout/Layout";
 import middle from "../../../assets/images/middle.png";
 
 const ValuePropositionSection = () => {

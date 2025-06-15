@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 // import useBreadcrumbs from "../../utils/hooks/useBreadcrumbs";
 import usePageTitle from "../../utils/hooks/usePageTitle";
-import Banner from "./Banner/Banner";
+import Layout from "./Layout/Layout";
 import Header from "./Header/Header";
 import { Box } from "@mui/material";
 // import Footer from "../Footer/Footer";
@@ -26,7 +26,7 @@ const Landing = () => {
       <PageWrapper>
         <Header />
         {/* {breadcrumbs} */}
-        <Banner />
+        <Layout />
       </PageWrapper>
     </Box>
   );

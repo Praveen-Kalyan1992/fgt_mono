@@ -16,20 +16,20 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import useBreadcrumbs from "../../../utils/hooks/useBreadcrumbs";
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-// import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import L, { LatLngExpression } from "leaflet";
 
 // Fix marker icon issue in Leaflet
-// delete L.Icon.Default.prototype._getIconUrl;
-// L.Icon.Default.mergeOptions({
-//   iconRetinaUrl:
-//     "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-//   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-//   shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-// });
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl:
+    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+});
 
-const position: [number, number] = [13.0827, 80.2707]; // Chennai coordinates
-// Dummy Map component for demonstration
+const position: LatLngExpression = [13.0827, 80.2707]; // Chennai coordinates
+
 const Map = () => (
   <Box
     sx={{
@@ -41,20 +41,17 @@ const Map = () => (
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      backgroundImage: "url(/map.png)",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
+      minHeight: { xs: 300, md: 525 },
     }}
   >
-    {/* You can replace this with an actual map (e.g., Google Maps, Leaflet, etc.) */}
     <MapContainer
-      // center={position}
-      // zoom={13}
-      // scrollWheelZoom={false}
-      style={{ height: "400px", width: "100%" }}
+      center={position}
+      zoom={13}
+      scrollWheelZoom={false}
+      style={{ height: "100%", width: "100%" }}
     >
       <TileLayer
-        // attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+        attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={position}>
@@ -66,9 +63,7 @@ const Map = () => (
 
 const Contact = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // <600px
-  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md")); // 600-900px
-  const isDesktop = useMediaQuery(theme.breakpoints.up("md")); // >900px
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const breadcrumbs = useBreadcrumbs();
 
   return (
@@ -76,16 +71,16 @@ const Contact = () => {
       {breadcrumbs}
       <Box
         sx={{
-          top: "250px",
+          top: "200px",
+          position: "relative",
           width: "100%",
           minHeight: { xs: 900, md: 982 },
           bgcolor: "background.paper",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          // pt: { xs: 4, md: 8 },
-          // pb: { xs: 4, md: 0 },
-          position: "relative",
+          pt: { xs: 4, md: 8 },
+          pb: { xs: 4, md: 0 },
         }}
       >
         {/* Section Title */}

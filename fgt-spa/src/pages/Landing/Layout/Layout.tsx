@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import HeroSection from "../HeroSection/HeroSection";
-import ValuePropositionSection from "../ValuePropositionSection/ValuePropositionSection";
+import ValueProposition from "../ValueProposition/ValueProposition";
 import OurServices from "../OurServices/OurServices";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
@@ -37,20 +37,20 @@ export const serviceCards = [
 // Mock data for web development services
 export const webServices = [
   { title: "Web Development" },
-  { title: "Web Development" },
-  { title: "" },
-  { title: "" },
-  { title: "" },
-  { title: "" },
+  { title: "Mobile Development" },
+  { title: "UI/UX Design" },
+  { title: "API Development" },
+  { title: "Cloud Solutions" },
+  { title: "E-commerce Development" },
 ];
 
 const Layout = () => {
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
       <HeroSection />
-      <ValuePropositionSection />
-      {/* <OurServices />
-      <Contact />
+      <ValueProposition />
+      <OurServices />
+      {/* <Contact />
       <Footer /> */}
     </Box>
   );

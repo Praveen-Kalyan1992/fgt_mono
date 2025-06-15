@@ -3,7 +3,7 @@ import { Box, Typography, Grid, Card, CardContent, useTheme, useMediaQuery } fro
 import { serviceCards } from "../Layout/Layout";
 import middle from "../../../assets/images/middle.png";
 
-const ValuePropositionSection = () => {
+const ValueProposition = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // <600px
   const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md")); // 600-900px
@@ -237,4 +237,4 @@ const ValuePropositionSection = () => {
   );
 };
 
-export default ValuePropositionSection;
+export default ValueProposition;

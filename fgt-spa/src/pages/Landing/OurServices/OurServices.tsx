@@ -7,6 +7,7 @@ import { webServices } from "../Layout/Layout";
 const OurServices = () => (
   <Box
     sx={{
+      top: "200px",
       position: "relative",
       width: "100%",
       height: "982px",

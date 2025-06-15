@@ -107,7 +107,7 @@ const OurServices = () => {
                     }}
                     onClick={() => console.log(`Service ${index + 1} clicked`)}
                   >
-                    {index < 2 && (
+                    {(
                       <>
                         <Box
                           sx={{

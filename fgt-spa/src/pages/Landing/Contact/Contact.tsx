@@ -26,6 +26,7 @@ const Contact = () => {
       {breadcrumbs}
       <Box
         sx={{
+          top: isMobile ? "200px" : isTablet ? "200px" : "177px",
           position: "relative",
           width: "100%",
           height: "982px",

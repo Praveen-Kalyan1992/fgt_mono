@@ -42,6 +42,7 @@ export const webServices = [
   { title: "API Development" },
   { title: "Cloud Solutions" },
   { title: "E-commerce Development" },
+  { title: "Yeadachum Pandrom" },
 ];
 
 const Layout = () => {
@@ -50,8 +51,8 @@ const Layout = () => {
       <HeroSection />
       <ValueProposition />
       <OurServices />
-      {/* <Contact />
-      <Footer /> */}
+      <Contact />
+      <Footer />
     </Box>
   );
 };

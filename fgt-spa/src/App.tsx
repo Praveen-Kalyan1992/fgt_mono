@@ -18,6 +18,7 @@ import {
   ThemeProvider,
   Divider,
   ListItemIcon,
+  useTheme,
   // Breadcrumbs,
 } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
@@ -35,20 +36,10 @@ const navItems = [
 ];
 
 const App: React.FC = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-
-  const theme = createTheme({
-    palette: {
-      mode: darkMode ? "dark" : "light",
-    },
-  });
-
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
-  const toggleDrawer = (open: boolean) => () => {
-    setDrawerOpen(open);
-  };
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // <600px
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md")); // 600-900px
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md")); // >900px
 
   return (
     <ThemeProvider theme={theme}>
@@ -98,11 +89,6 @@ const App: React.FC = () => {
               <AppRoutes />
             </Box>
 
-            {/* <Box component="footer" sx={{ py: 4, bgcolor: "grey.200", textAlign: "center" }}>
-              <Typography variant="body2" color="text.secondary">
-                © 2025 My Website. All rights reserved.
-              </Typography>
-            </Box> */}
             <Footer />
           </Box>
         </Box>

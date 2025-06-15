@@ -3,15 +3,15 @@ import { Box, Typography, Grid, Card, CardContent } from "@mui/material";
 import { serviceCards } from "../Banner/Banner";
 
 const ValuePropositionSection = () => (
-  <Box
-    sx={{
-      top: "130px",
-      position: "relative",
-      width: "100%",
-      height: "982px",
-      bgcolor: "background.paper",
-    }}
-  >
+  // <Box
+  //   sx={{
+  //     top: "200px",
+  //     position: "relative",
+  //     width: "100%",
+  //     height: "982px",
+  //     bgcolor: "background.paper",
+  //   }}
+  // >
     <Box
       sx={{
         position: "relative",
@@ -122,6 +122,7 @@ const ValuePropositionSection = () => (
           left: 0,
           bgcolor: "background.paper",
           borderRadius: "0 0 0 280px",
+          border: "1px solid red",
         }}
       >
         <Typography
@@ -152,6 +153,7 @@ const ValuePropositionSection = () => (
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            flexWrap: "nowrap",
           }}
         >
           {serviceCards.map((card, index) => (
@@ -161,8 +163,9 @@ const ValuePropositionSection = () => (
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "flex-end",
-                  p: 4,
-                  height: "100%",
+                  p: 2,
+                  height: "280px",
+                  width: "243px%",
                   borderRadius: "32px",
                   background:
                     "linear-gradient(180deg, rgba(249,249,249,1) 0%, rgba(212,212,212,1) 50%, rgba(255,255,255,1) 100%)",
@@ -172,7 +175,7 @@ const ValuePropositionSection = () => (
                   sx={{
                     display: "flex",
                     flexDirection: "column",
-                    height: "100px",
+                    height: "50px",
                     alignItems: "center",
                     justifyContent: "center",
                     p: 2.5,
@@ -225,7 +228,7 @@ const ValuePropositionSection = () => (
         </Grid>
       </Box>
     </Box>
-  </Box>
+  // </Box>
 );
 
 export default ValuePropositionSection;
